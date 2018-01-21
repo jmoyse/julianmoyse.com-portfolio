@@ -11,12 +11,31 @@ import ListItem from 'material-ui/List/ListItem';
 import ListItemIcon from 'material-ui/List/ListItemIcon';
 import ListItemText from 'material-ui/List/ListItemText';
 import Divider from 'material-ui/Divider/Divider';
-import Card from 'material-ui/Card/Card';
+import MenuIcon from 'material-ui-icons/Menu';
 import CardContent from 'material-ui/Card/CardContent';
+import Typography from 'material-ui/Typography/Typography';
+import Reboot from 'material-ui/Reboot/Reboot';
+import AppBar from 'material-ui/AppBar/AppBar';
+import Paper from 'material-ui/Paper/Paper';
+import Toolbar from 'material-ui/Toolbar/Toolbar';
+import IconButton from 'material-ui/IconButton/IconButton';
+// import KeyboardArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
+// import KeyboardArrowRight from 'material-ui-icons/KeyboardArrowRight';
 
+import * as classNames from 'classnames';
 
+import { withStyles, WithStyles } from 'material-ui/styles';
+import Button from 'material-ui/Button/Button';
+import MobileStepper from 'material-ui/MobileStepper/MobileStepper';
 
+export interface PortfolioProps {
 
+}
+
+export interface PortfolioState {
+  height: number;
+  scrollTo: number;
+}
 
 /*
 const decorate = withStyles(({ palette, spacing }) => ({
@@ -28,156 +47,245 @@ const decorate = withStyles(({ palette, spacing }) => ({
 }));
 */
 
-
 // Favicon: https://favicon.io/
 const wordcoasterImg = require('./screenshots/wordcoaster.png');
 const mp3player = require('./screenshots/mp3player-screenshot.png');
-const headshot = require('./img/headshot.jpg');
+const headshot = require('./img/headshot2.jpg');
 
-const style = {
-  margin: 5,
-  width: 100,
-  height: 100,
-  display: 'inline-block',
+const styles = {
+  box: {
+    margin: 10,
+    padding: 10,
+    border: 'solid 1px gray',
+  },
+  button: {
+    margin: 10,
+  },
+  buttonWithHover: {
+    margin: 10,
+    // hoverも記述できる
+    '&:hover': {
+      backgroundColor: '#ff0000',
+    }
+  },
+  avatar: {
+    margin: 10,
+  },
+  bigAvatar: {
+    width: 250,
+    height: 250,
+    display: 'inline-block',
+    textAlign: 'center',
+    alignself: 'center',
+    marginBottom: '50px',
+  },
 };
 
+type ClassNames = keyof typeof styles;
+class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, PortfolioState> {
+
+  constructor (props: PortfolioProps & WithStyles<ClassNames>) {
+    super(props);
+    this.state = {
+      height: 0,
+      scrollTo: 0,
+    };
+  }
 
 
-class App extends React.Component {
+  onScrollToIntro = () => {
+    scrollTo(0, this.state.scrollTo);
+  }
+
   render () {
     return (
-      <div className="App">
+
+      <div className="App" >
+
+        <div >
+          <Reboot />
+          <AppBar position="static">
+            <Toolbar>
+              <IconButton color="contrast" aria-label="Menu">
+                <MenuIcon />
+              </IconButton>
+
+            </Toolbar>
+          </AppBar>
+        </div>
+
+        {
+          /*
+        <div className="header-wrapper" style={{ 'height': this.state.height }}>
+          <div className="scroll-down-btn">
+            <Button
+              fab={true}
+              color="primary"
+              aria-label="add"
+              // backgroundColor="#A80202"
+              onClick={evt => this.onScrollToIntro()}
+            >
+              <AddIcon />
+            </Button>
+          </div>
+      </div>
+        */
+        }
+
+        {
+          /*
+                    <div id="firstScreen" className="bg">
+                      <Typography paragraph={true} style={{ fontSize: '90px' }}>
+                        hi ...
+                    </Typography>
+                    </div>
+                    */
+        }
         <div className="backgroundHeader">
-          <h1>Julian Moyse</h1>
-          <h5>Full-Stack Developer</h5>
+
           <Avatar
             src={headshot}
-            style={style}
+            className={classNames(this.props.classes.avatar, this.props.classes.bigAvatar)}
           />
+          <Typography type="display3" gutterBottom={true} paragraph={true}>
+            Julian Moyse
+          </Typography>
+
+          <Typography type="headline" gutterBottom={true} paragraph={true}>
+            Full Stack Developer
+          </Typography>
+
+          <Button color="primary" >
+            julianmoyse.com
+          </Button>
         </div>
 
         <div className="lowerBody">
-
           <div>
-            <Card >
+            <Typography type="display2" gutterBottom={true} paragraph={true}>
+              About
+            </Typography>
+            <Paper elevation={15} style={{ width: '400px' }}>
               <CardContent>
 
+                <Typography type="headline" component="h3">
+                  Hello
+                </Typography>
 
-                <p>
 
-                  <b>Hello</b>, my name is Julian Moyse.
-              I am a software developer and Computer Scientist.
-              I graduated from the <a href="www.umd.edu">University of Maryland</a> with a BSc in Computer Science.
 
-                I am a detail-oriented developer with an passion for writing clean,
-                efficent and well maintained code.
-            I pride myself in staying up to date with the latest technology and software design principles.
-            </p>
-                <p>Currently working as a freelance web developer, but always open to new opportunities.
-                </p>
+                <Typography paragraph={true}>
+                  I am a software developer and Computer Scientist.
+                    I graduated from the <a href="www.umd.edu">University of Maryland</a>
+                  with a BSc in Computer Science.
+                    I am a detail-oriented developer with an passion for writing clean,
+                    efficent and well maintained code.
+                    I pride myself in staying up to date with the latest technology and software design principles.
+                </Typography>
 
-                <h3>Lifelong geek, nerd and techie.</h3>
-                <h5>Feel free to shoot me a message</h5>
+                <Typography paragraph={true}>
+                  Currently working as a freelance web developer, but always open to new opportunities.
+                </Typography>
+                <Typography type="headline" component="h3">
+                  Lifelong geek, nerd and techie.
+                </Typography>
 
-                <p />
+                <Typography component="h5">
+                  Feel free to shoot me a message
+                </Typography>
               </CardContent>
-            </Card>
+            </Paper>
           </div>
         </div>
+
         <div className="intro">
 
-
-
           <div className="contactBody">
+            <Typography type="display2" gutterBottom={true} paragraph={true}>
+              Contact
+            </Typography>
+            <Paper elevation={15} style={{ width: '350px' }}>
+              <List style={{ width: '350px' }}>
+                <ListItem button={true} >
 
-            <div>
-              <h3>Contact</h3>
-            </div>
+                  <ListItemIcon>
 
-            <List style={{ width: '350px' }}>
-              <ListItem button={true} >
+                    <FontAwesome
+                      className="contactIconDiv"
+                      name="github"
+                      size="2x"
+                      style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                    />
 
-                <ListItemIcon>
+                  </ListItemIcon>
 
-                  <FontAwesome
-                    className="contactIconDiv"
-                    name="github"
-                    size="2x"
-                    style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-                  />
+                  <ListItemText primary="github.com/jmoyse" />
 
-                </ListItemIcon>
+                </ListItem>
+                <Divider />
+                <ListItem button={true}>
+                  <ListItemIcon>
+                    <FontAwesome
+                      className="contactIconDiv"
+                      name="facebook-square"
+                      size="2x"
+                      style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary="facebook.com/julianmoyse" />
+                </ListItem>
+                <Divider />
 
-                <ListItemText primary="github.com/jmoyse" />
+                <ListItem button={true}>
+                  <ListItemIcon>
+                    <FontAwesome
+                      className="contactIconDiv"
+                      name="twitter"
+                      size="2x"
+                      style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary="@julianmoyse" />
+                </ListItem>
 
-              </ListItem>
-              <Divider />
-              <ListItem button={true}>
-                <ListItemIcon>
-                  <FontAwesome
-                    className="contactIconDiv"
-                    name="facebook-square"
-                    size="2x"
-                    style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary="facebook.com/julianmoyse" />
-              </ListItem>
-              <Divider />
-
-              <ListItem button={true}>
-                <ListItemIcon>
-                  <FontAwesome
-                    className="contactIconDiv"
-                    name="twitter"
-                    size="2x"
-                    style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary="@julianmoyse" />
-              </ListItem>
-
-              <Divider />
-              <ListItem button={true}>
-                <ListItemIcon>
-                  <FontAwesome
-                    className="contactIconDiv"
-                    name="google-plus"
-                    size="2x"
-                    style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary="Google+" />
-              </ListItem>
-              <Divider />
-              <ListItem button={true}>
-                <ListItemIcon>
-                  <FontAwesome
-                    className="contactIconDiv"
-                    name="linkedin-square"
-                    size="2x"
-                    style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary="linkedin.com/in/julianmoyse" />
-              </ListItem>
-              <Divider />
-              <ListItem button={true}>
-                <ListItemIcon>
-                  <FontAwesome
-                    className="contactIconDiv"
-                    name="envelope-open"
-                    size="2x"
-                    style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary="hello@julianmoyse.com" />
-              </ListItem>
-
-
-            </List>
-
-
+                <Divider />
+                <ListItem button={true}>
+                  <ListItemIcon>
+                    <FontAwesome
+                      className="contactIconDiv"
+                      name="google-plus"
+                      size="2x"
+                      style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary="Google+" />
+                </ListItem>
+                <Divider />
+                <ListItem button={true}>
+                  <ListItemIcon>
+                    <FontAwesome
+                      className="contactIconDiv"
+                      name="linkedin-square"
+                      size="2x"
+                      style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary="linkedin.com/in/julianmoyse" />
+                </ListItem>
+                <Divider />
+                <ListItem button={true}>
+                  <ListItemIcon>
+                    <FontAwesome
+                      className="contactIconDiv"
+                      name="envelope-open"
+                      size="2x"
+                      style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary="hello@julianmoyse.com" />
+                </ListItem>
+              </List>
+            </Paper>
             {/*
 
               <div className="projectsContainer">
@@ -241,99 +349,135 @@ class App extends React.Component {
             }
           </div>
 
-
           <p />
           <div className="projectsBody">
             <div >
-              <h3>Personal Projects</h3>
+              <Typography type="display2" gutterBottom={true} paragraph={true}>
+                Personal Projects
+              </Typography>
+
             </div>
             <div className="projectsContainer">
               {
                 /*Collection a few smaller personal projects I've written over the years. */
               }
-              <div id="wordCoaster" className="singleProjectDiv">
+              <Paper elevation={15} style={{ padding: '20px' }}>
+                <div id="wordCoaster" className="singleProjectDiv">
 
-                <img src={wordcoasterImg} width="436px" height="500px" />
-                <div>
+                  <img src={wordcoasterImg} width="436px" height="500px" />
                   <div>
                     <div>
-                      <div className="projectHeaderText" >Word Coaster<br />
+                      <div>
+                        <div className="projectHeaderText" >Word Coaster<br />
 
-                        {/*
+                          {/*
                         <a href="https://www.wordcoaster.julianmoyse.com/">www.wordcoaster.fun</a>
                           &nbsp;[<a href="img/ws1.png">1</a>,<a href="img/ws1.png">2</a>,<a href="img/ws1.png">3</a>]
                       */}
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="projectDescription">
-                    Mobile and Native Web multi-player word game.
+                    <div className="projectDescription">
+                      Mobile and Native Web multi-player word game.
                     A modern and new twist on classic board games like Scrabble and Boggle.
                     Supports hundreds of concurrent players with chat, score history and profiles.
                     Cleanly written using a number of different modern languages and APIs.
                     Broken up in a number of smaller projects.
                 </div>
-                  <br />
+                    <br />
 
-                  <ul >
-                    <li>
-                      <div>
-                        <b>Game Server Back-end</b>
-                        &nbsp;[<a href="img/ws1.png">1</a>,<a href="img/ws1.png">2</a>,<a href="img/ws1.png">3</a>]
+                    <ul >
+                      <li>
+                        <div>
+                          <b>Game Server Back-end</b>
+                          &nbsp;[<a href="img/ws1.png">1</a>,<a href="img/ws1.png">2</a>,<a href="img/ws1.png">3</a>]
                         .NET Core 2.0, C#, Docker, SQLite
                     </div>
-                      <div>
-                        Running multi-threaded WebSocket backend.Accounts and game history stored in a SQlite database.
+                        <div>
+                          Running multi-threaded WebSocket backend.Accounts and game history stored in a SQlite database.
                         Dockerized for scaleability. Deployable to Linux, Windows or MacOSX.
                       </div>
-                    </li>
-                    <li>
-                      <div>
-                        <b>Web App Front-end</b>
-                        &nbsp;[<a href="img/ws1.png">1</a>,<a href="img/ws1.png">2</a>,<a href="img/ws1.png">3</a>]
+                      </li>
+                      <li>
+                        <div>
+                          <b>Web App Front-end</b>
+                          &nbsp;[<a href="img/ws1.png">1</a>,<a href="img/ws1.png">2</a>,<a href="img/ws1.png">3</a>]
                         TypeScript/Javascript, React, WebPack, HTML 5
               </div>
-                      <div>
                         <div>
-                          Touch enabled, JS front-end.
+                          <div>
+                            Touch enabled, JS front-end.
                           Connects to gameserver with WebSockets. Includes user profiles and player history.
                         </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <b>Solution Micro-service</b>
-                        &nbsp;[<a href="img/ws1.png">1</a>,<a href="img/ws1.png">2</a>,<a href="img/ws1.png">3</a>]
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <b>Solution Micro-service</b>
+                          &nbsp;[<a href="img/ws1.png">1</a>,<a href="img/ws1.png">2</a>,<a href="img/ws1.png">3</a>]
                         TypeScript, Node.js, Express.js, JSON
                       </div>
-                      <div>
                         <div>
-                          Microservice that efficently
+                          <div>
+                            Microservice that efficently
                           solves a board of any given size using a trie and depth-first traversal of the gameboard.
                           Returns results in JSON (<a href="null">link</a>) (<a href="null">source</a>)
                         </div>
-                      </div>
-                    </li>
+                        </div>
+                      </li>
 
-                    <li>
-                      <div>
-                        <b>Desktop Back-end</b>
-                        &nbsp;[<a href="img/ws1.png">1</a>,<a href="img/ws1.png">2</a>,<a href="img/ws1.png">3</a>]
+                      <li>
+                        <div>
+                          <b>Desktop Back-end</b>
+                          &nbsp;[<a href="img/ws1.png">1</a>,<a href="img/ws1.png">2</a>,<a href="img/ws1.png">3</a>]
                          .NET 4.0, C#, WebSockets
                       </div>
-                      <div>
-                        Windows client that connects to the game server and allows communication
+                        <div>
+                          Windows client that connects to the game server and allows communication
                         with the gameserver and webclient
                         (<a href="null">source</a>) (<a href="null">binaries</a>)
                       </div>
-                    </li>
-                  </ul >
-                  <br />
+                      </li>
+                    </ul >
+                    <br />
 
-                  <a className="launchButton" href="http://vistoryapp.com" target="blank">Open app site</a>
+                    <a className="launchButton" href="http://vistoryapp.com" target="blank">Open app site</a>
+                  </div>
                 </div>
-              </div>
+
+                <MobileStepper
+                  type="dots"
+                  steps={6}
+                  position="static"
+                  // activeStep={this.state.activeStep}
+                  // className={classes.root}
+                  nextButton={
+                    <Button
+                      dense={true}
+                    // onClick={this.handleNext}
+                    // disabled={this.state.activeStep === 5}
+                    >
+                      Next
+                      {
+                        // theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />
+                      }
+                    </Button>
+                  }
+                  backButton={
+                    <Button
+                      dense={true}
+                    // onClick={this.handleBack}
+                    // disabled={this.state.activeStep === 0}
+                    >
+                      {
+                        // theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />
+                      }
+                      Back
+                    </Button>
+                  }
+                />
+              </Paper>
 
               <p />
               <div>
@@ -421,16 +565,17 @@ class App extends React.Component {
           <div>
             <h3>Education</h3>
             <div className="projectsContainer">
+              <Paper elevation={15} style={{ width: '400px' }}>
+                <div><b>University of Maryland</b> College Park, MD</div>
 
-              <div><b>University of Maryland</b> College Park, MD</div>
-
-              BSc. Computer Science
+                BSc. Computer Science
                     <br />
-              <div><b>Howard Community College</b> Columbia, MD</div>
-              <div> AA. Mathmatics</div>
-              <div> AA. Computer Science</div>
-
+                <div><b>Howard Community College</b> Columbia, MD</div>
+                <div> AA. Mathmatics</div>
+                <div> AA. Computer Science</div>
+              </Paper>
             </div>
+
           </div >
           <p />
 
@@ -472,6 +617,9 @@ class App extends React.Component {
           </div>
 
         </div >
+
+        Professional skills
+
         <div className="footer">
           © 2018 Julian Moyse
         </div>
@@ -479,5 +627,7 @@ class App extends React.Component {
     );
   }
 }
+
+const App = withStyles(styles)<PortfolioProps>(AppStyle);
 
 export default App;

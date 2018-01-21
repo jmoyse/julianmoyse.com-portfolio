@@ -332,6 +332,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: antialiased;
+    text-align: left;
   }
 
   .App-header {
@@ -345,16 +346,21 @@
   }
 
   .backgroundHeader {
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 100%;
     background: #FFFFFF;
     color: #4A4E69 !important;
     text-align: center;
-    padding-bottom: 10px;
+    align-content: center;
   }
 
   .lowerBody {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: rgb(211, 211, 211);
   }
 
   .intro {
@@ -397,6 +403,23 @@
   h5 {
     color: #4A4E69;
     font-weight: 300;
+  }
+
+  .contactBody {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  .projectsBody {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: rgb(211, 211, 211);
+    text-align: left;
   }
 
   .contactIconDiv {
@@ -461,4 +484,19 @@
     margin-top: 70px;
     padding-top: 2px;
     padding-bottom: 2px;
+  }
+
+  .bg {
+    background: #F7971E;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFD200, #F7971E);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFD200, #F7971E);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 2000px;
+  }
+
+  .avatar-style {
+    height: 100px;
+    width: 100px;
   }
