@@ -349,10 +349,15 @@
     padding-top: 50px;
     padding-bottom: 50px;
     width: 100%;
-    background: #FFFFFF;
     color: #4A4E69 !important;
     text-align: center;
     align-content: center;
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #F2F2F2, #DBDBDB, #F2F2F2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #F2F2F2, #DBDBDB, #F2F2F2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   .lowerBody {
@@ -360,11 +365,21 @@
     padding-right: 20px;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: rgb(211, 211, 211);
+    background: #D3D3D3;
+    background: -webkit-linear-gradient(to left, #D3D3D3, #BCBCBC, #D3D3D3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EAEAEA, #D3D3D3, #EAEAEA);
   }
 
   .intro {
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: -webkit-linear-gradient(to left, #F2F2F2, #DBDBDB, #F2F2F2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #F2F2F2, #DBDBDB, #F2F2F2);
   }
 
   h1 {
@@ -420,6 +435,9 @@
     padding-right: 20px;
     background: rgb(211, 211, 211);
     text-align: left;
+    background: -webkit-linear-gradient(to left, #D3D3D3, #BCBCBC, #D3D3D3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EAEAEA, #D3D3D3, #EAEAEA);
   }
 
   .contactIconDiv {

@@ -6,6 +6,8 @@
     "@types/classnames": "^2.2.3",
     "@types/react-fontawesome": "^1.6.1",
     "@types/react-redux": "^5.0.14",
+    "@types/react-scroll": "^1.5.2",
+    "@types/react-slick": "^0.15.0",
     "classnames": "^2.2.5",
     "material-ui": "^1.0.0-beta.29",
     "material-ui-icons": "^1.0.0-beta.17",
@@ -14,6 +16,8 @@
     "react-fontawesome": "^1.6.1",
     "react-redux": "^5.0.6",
     "react-scripts-ts": "2.8.0",
+    "react-scroll": "^1.7.6",
+    "react-slick": "^0.16.0",
     "redux": "^3.7.2"
   },
   "scripts": {
