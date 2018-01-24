@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Typography from 'material-ui/Typography/Typography';
 import { withStyles, WithStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid/Grid';
 import Paper from 'material-ui/Paper/Paper';
@@ -7,9 +6,11 @@ import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
 import ListItemIcon from 'material-ui/List/ListItemIcon';
 import ListItemText from 'material-ui/List/ListItemText';
-import Divider from 'material-ui/Divider/Divider';
 import * as FontAwesome from 'react-fontawesome';
 import './Contact.css';
+
+import Tabs from 'material-ui/Tabs/Tabs';
+import Tab from 'material-ui/Tabs/Tab';
 
 const style = {
 
@@ -27,31 +28,46 @@ type ClassNames = keyof typeof style;
 class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNames>, ContactState> {
     constructor (props: ContactProps & WithStyles<ClassNames>) {
         super(props);
-
     }
 
     render () {
         return (
-            <div id="ContactBody" className="lowerBody">
-                <Typography type="display2" gutterBottom={true} paragraph={true}>
-                    Contact
-            </Typography>
+            <div
+                id="ContactBody"
+                style={
+                    {
+                        display: 'inline-block',
+                        verticalAlign: 'top',
+                        alignSelf: 'center',
+                        paddingTop: '20px',
+                    }}
+            >
+
                 <Grid
                     container={true}
-                    spacing={24}
+                    spacing={8}
                 >
                     <Grid item={true} xs={12}>
+
                         <Grid
                             container={true}
                             alignItems="center"
                             direction="row"
                             justify="center"
                         >
-                            <div className="contactBody">
 
-                                <Paper elevation={15} style={{ width: '350px' }}>
-                                    <List style={{ width: '350px' }}>
-                                        <ListItem button={true} >
+                            <div className="contactBody" >
+
+                                <Paper elevation={15}  >
+
+                                    <Tabs value={0} fullWidth={true}>
+                                        <Tab label=" Contact" fullWidth={true} />
+
+                                    </Tabs>
+
+                                    <List >
+
+                                        <ListItem button={true} divider={true}>
 
                                             <ListItemIcon>
                                                 <FontAwesome
@@ -66,8 +82,8 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                                             <ListItemText primary="github.com/jmoyse" />
 
                                         </ListItem>
-                                        <Divider />
-                                        <ListItem button={true}>
+
+                                        <ListItem button={true} divider={true} >
                                             <ListItemIcon>
                                                 <FontAwesome
                                                     className="contactIconDiv"
@@ -78,9 +94,9 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                                             </ListItemIcon>
                                             <ListItemText primary="facebook.com/julianmoyse" />
                                         </ListItem>
-                                        <Divider />
 
-                                        <ListItem button={true}>
+
+                                        <ListItem button={true} divider={true} >
                                             <ListItemIcon>
                                                 <FontAwesome
                                                     className="contactIconDiv"
@@ -92,8 +108,8 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                                             <ListItemText primary="@julianmoyse" />
                                         </ListItem>
 
-                                        <Divider />
-                                        <ListItem button={true}>
+
+                                        <ListItem button={true} divider={true} >
                                             <ListItemIcon>
                                                 <FontAwesome
                                                     className="contactIconDiv"
@@ -104,8 +120,8 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                                             </ListItemIcon>
                                             <ListItemText primary="Google+" />
                                         </ListItem>
-                                        <Divider />
-                                        <ListItem button={true}>
+
+                                        <ListItem button={true} divider={true} >
                                             <ListItemIcon>
                                                 <FontAwesome
                                                     className="contactIconDiv"
@@ -116,8 +132,8 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                                             </ListItemIcon>
                                             <ListItemText primary="linkedin.com/in/julianmoyse" />
                                         </ListItem>
-                                        <Divider />
-                                        <ListItem button={true}>
+
+                                        <ListItem button={true} divider={true} >
                                             <ListItemIcon>
                                                 <FontAwesome
                                                     className="contactIconDiv"

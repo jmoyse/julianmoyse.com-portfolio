@@ -2,6 +2,7 @@ import * as React from 'react';
 import Typography from 'material-ui/Typography/Typography';
 import { withStyles, WithStyles } from 'material-ui/styles';
 import './Server.css';
+import Button from 'material-ui/Button/Button';
 
 const style = {
 
@@ -29,40 +30,55 @@ class ServerComponent extends React.Component<ServerProps & WithStyles<ClassName
                 <div className="intro">
                     <div>
                         <div>
-                            <Typography type="display2" gutterBottom={true} paragraph={true}>
+                            <Typography type="display2" paragraph={true} align="center" style={{ paddingBottom: '30px' }}>
                                 Server
-              </Typography>
+                    </Typography>
                         </div>
                         <div className="projectsContainer">
-                            <div>
+                            <Typography type="title" gutterBottom={true}>
                                 Hosted on a Virtual Private Server courtsy of
-                                <a href="www.vultr.com">Vultr.com</a>.<br />
-                                Source hosted on Github and locally . SSL from LetsEncrypt<br />
-                                <div>2.0GB memory and 100GB SSD</div>
-                            </div>
+                                <Button href="www.vultr.com">Vultr.com</Button><br />
+                                Source hosted on Github and locally. SSL from LetsEncrypt<br />
+                                2.0GB memory and 100GB SSD<br />
+                            </Typography>
 
+
+                            {
+                                /*
+                                <Typography type="title" gutterBottom={true}>
+                                    Computer Science, Bachlors
+                                                        </Typography>
+                                <Typography type="subheading" gutterBottom={true} >
+                                    University of Maryland
+                                                        </Typography>
+                                <Typography type="body2" gutterBottom={true}>
+                                    College Park, Maryland
+                                                        </Typography>
+                                                        */
+                            }
                             <div>
-                                <a href="https://coreos.com/releases/">CoreOS</a>
-                                &nbsp; stable branch
+
+                                <Button href="https://coreos.com/releases/">CoreOS</Button>
+                                &nbsp;
                             </div>
                             <div>
-                                <a href="https://hub.docker.com/_/nginx/">docker/nginx</a>
+                                <Button href="https://hub.docker.com/_/nginx/">docker/nginx</Button>
                             </div>
                             <div>
-                                <a href="https://hub.docker.com/r/tvial/docker-mailserver/">docker/mailserver</a>
+                                <Button href="https://hub.docker.com/r/tvial/docker-mailserver/">docker/mailserver</Button>
                             </div>
                             <div>
-                                <a href="https://hub.docker.com/r/tvial/docker-mailserver/">docker/nodejs</a>
+                                <Button href="https://hub.docker.com/r/tvial/docker-mailserver/">docker/nodejs</Button>
                             </div>
                             <div>
-                                <a href="https://hub.docker.com/_/node/">docker/nodejs</a>
+                                <Button href="https://hub.docker.com/_/node/">docker/nodejs</Button>
 
                             </div>
                             <div>
-                                <a href="https://github.com/dotnet/dotnet-docker">docker/dotnet</a>
+                                <Button href="https://github.com/dotnet/dotnet-docker">docker/dotnet</Button>
                             </div>
                             <div>
-                                <a href="https://hub.docker.com/r/linuxserver/letsencrypt/">docker/letsencrypt</a>
+                                <Button href="https://hub.docker.com/r/linuxserver/letsencrypt/">docker/letsencrypt</Button>
                             </div>
                         </div >
                     </div>

@@ -23,7 +23,7 @@ class FooterComponent extends React.Component<FooterProps & WithStyles<ClassName
 
     render () {
         return (
-            <div id="FooterBody" className="lowerBody">
+            <div id="FooterBody">
                 < div className="footer" >
                     © 2018 Julian Moyse
                 </div >

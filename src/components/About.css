@@ -1,0 +1,7 @@
+  .aboutBody {
+      padding-bottom: 50px;
+      background: #D3D3D3;
+      background: -webkit-linear-gradient(to left, #D3D3D3, #BCBCBC, #D3D3D3);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #EAEAEA, #D3D3D3, #EAEAEA);
+  }
