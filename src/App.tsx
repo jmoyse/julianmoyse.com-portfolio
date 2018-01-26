@@ -21,10 +21,11 @@ import Skills from './components/Skills';
 import Footer from './components/Footer';
 import Fade from 'material-ui/transitions/Fade';
 
+var xml = require('./data.json');
+
 const theme = createMuiTheme({
 
   palette: {
-
     primary: {
       light: '#FFFFFF',
       main: '#3f50b5',
@@ -47,7 +48,6 @@ export interface PortfolioProps {
 export interface PortfolioState {
   appBarVisible: boolean;
 }
-
 
 const styles = {
 
@@ -97,14 +97,14 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
   }
 
   onArrowMouseDown = () => {
-    this.scrollToComponent('aboutBody', 'easeOutQuad', true);
+    this.scrollTo('aboutBody', 'easeOutQuad', true);
     this.setScrolling();
     this.setAppBarVisible(true);
 
   }
 
   onArrowMouseUp = () => {
-    this.scrollToComponent('top', 'easeOutQuad', true);
+    this.scrollTo('top', 'easeOutQuad', true);
     this.setScrolling();
     this.setAppBarVisible(false);
   }
@@ -125,7 +125,7 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
     }, this.SCROLL_DURATION_MS + 100);
   }
 
-  scrollToComponent = (component: string, easingFunction: string, canCancel: boolean) => {
+  scrollTo = (component: string, easingFunction: string, canCancel: boolean) => {
     this.scroller.scrollTo(component, {
       duration: this.SCROLL_DURATION_MS,
       delay: 0,
@@ -137,39 +137,37 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
   render () {
     return (
       <div id="top" className="App" >
+        <Reboot />
         <section id="headerSection" />
         <MuiThemeProvider theme={theme}>
 
-          <Reboot />
+
           <div hidden={!this.state.appBarVisible}>
             <Fade in={true} >
-
               <AppBar position="fixed" >
                 <Toolbar>
                   <IconButton color="contrast" aria-label="Menu">
                     <MenuIcon />
                   </IconButton>
-                  <Button color="contrast" onClick={() => this.scrollToComponent('aboutSection', 'easeOutQuad', false)}>
+                  <Button color="contrast" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
                     About
                   </Button>
-                  <Button color="contrast" onClick={() => this.scrollToComponent('aboutSection', 'easeOutQuad', false)}>
+                  <Button color="contrast" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
                     Contact
                 </Button>
-                  <Button color="contrast" onClick={() => this.scrollToComponent('projectsSection', 'easeOutQuad', false)}>
+                  <Button color="contrast" onClick={() => this.scrollTo('projectsSection', 'easeOutQuad', false)}>
                     Projects
                 </Button>
-                  <Button color="contrast" onClick={() => this.scrollToComponent('educationSection', 'easeOutQuad', false)}>
+                  <Button color="contrast" onClick={() => this.scrollTo('educationSection', 'easeOutQuad', false)}>
                     Education
                 </Button>
-                  <Button color="contrast" onClick={() => this.scrollToComponent('skillsSection', 'easeOutQuad', false)}>
+                  <Button color="contrast" onClick={() => this.scrollTo('skillsSection', 'easeOutQuad', false)}>
                     Skills
                 </Button>
                 </Toolbar>
               </AppBar>
             </Fade>
           </div>
-
-
 
           <section id="introSection">
             <Intro
@@ -180,7 +178,10 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
             <About />
           </section>
           <section id="projectsSection">
-            <Projects />
+            <Projects
+              projects={xml.portfolio.projects}
+            />
+
           </section>
           <section id="educationSection">
             <Education />
@@ -195,10 +196,8 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
             <Footer />
           </section>
 
-
         </MuiThemeProvider>
       </div >
-
     );
   }
 }

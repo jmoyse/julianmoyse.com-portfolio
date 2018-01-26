@@ -1,0 +1,120 @@
+<portfolio>
+    <intro avatar="/images/headshot.jpg" heading="Julian Moyse"  subheading="Full Stack Developer" />
+    <about>
+    I am a Software Developer and Computer Scientist. I graduated from the University of Marylandwith a Bachelors in Computer Science. I am a detail-oriented developer with an passion for writing clean, efficent and well maintained code. I pride myself in staying up to date with the latest technology and software design principles.
+
+Currently working as a freelance web developer, but always open to new opportunities.
+Lifelong geek, nerd and techie.
+Feel free to shoot me a message
+    </about>
+
+    <contacts>
+        <contact name="github.com/jmoyse" link="github.com/jmoyse" icon="github" />
+        <contact name="facebook.com/julianmoyse" link="facebook.com/julianmoyse" icon="facebook" />
+        <contact name="@julianmoyse" link="twitter.com/julianmoyse" icon="twitter" />
+        <contact name="Google+" link="google.com/something" icon="googleplus" />
+        <contact name="linkedin.com/in/julianmoyse" link="linkedin.com/in/julianmoyse" icon="linkedin" />
+        <contact name="hello@julianmoyse.com" link="mailto:hello@julianmoyse.com" icon="email" />
+    </contacts>
+
+    <projects>
+        <project name="Word Coaster" url="wordcoaster.fun" screenshot="wordcoaster.png">
+            <description>
+                Mobile and Native Web multi-player word game. A modern and new twist on classic board games like Scrabble and Boggle. Supports hundreds of concurrent players with chat, score history and profiles. Cleanly written using a number of different modern languages and APIs. Broken up in a number of smaller projects.
+            </description>
+        <techs>
+            <tech name="Typescript" icon="typescript" />
+            <tech name="Javascript" icon="typescript" />
+            <tech name="React" icon="typescript" />
+            <tech name="Redux" icon="typescript" />
+            <tech name="Webpack" icon="typescript" />
+            <tech name="HTML 5" icon="typescript" />
+            <tech name="Material UI" icon="typescript" />
+        </techs>
+        </project>
+
+        <project name="2048" url="wordcoaster.fun" screenshot="2048.png">
+            <description>
+                .NET version of the 2048 tile game
+            </description>        
+             <techs>
+            <tech name="C#" icon="csharp" />
+            <tech name=".NET Runtime" icon="dotnet" />            
+             </techs>
+        </project>
+
+        <project name="Loose Quad-Tree Data Structure" url="wordcoaster.fun" screenshot="showquad.png">
+            <description>
+               C++ implementation of the Data Structure used for efficent querying of 2-D objects. Supports efficent range queries and storage. Written for CMSC420 (Data Structures).
+            </description>
+            <techs>
+                <tech name="C++" icon="cplusplus" />
+                <tech name="Linux" icon="Linux" />
+            </techs>
+        </project>
+
+
+        <project name="Word Coaster Server Back-end" url="" screenshot="gameserver1.png">
+            <description>
+               Running multi-threaded WebSocket backend. Accounts and game history stored in a SQlite database. Dockerized for scaleability. Deployable to Linux, Windows or MacOSX.
+            </description>
+            <techs>
+                <tech name=".NET Core" icon="netcore" />
+                <tech name="C#" icon="csharp" />
+                <tech name="WebSockets" icon="WebSockets" />
+                <tech name="Docker" icon="Docker" />
+                <tech name="SQLite" icon="SQLite" />
+            </techs>
+        </project>
+
+        <project name="Game Solution Solver" url="" screenshot="solver.png">
+            <description>
+               Microservice that efficently solves a board of any given size using a trie and depth-first traversal of the gameboard. Returns results in JSON (link) (source)
+            </description>
+            <techs>
+                <tech name="Node.js" icon="cplusplus" />
+                <tech name="Express" icon="csharp" />
+                <tech name="Typescript" icon="csharp" />
+                <tech name="JSON" icon="WebSockets" />
+                <tech name="Docker" icon="Docker" />
+            </techs>
+        </project>
+
+        <project name="XMMS Mp3 Player Clone" url="" screenshot="mp3player-screenshot.png">
+            <description>
+               XMMS clone mp3 player written for Mono for Linux.
+            </description>
+            <techs>
+                <tech name="Mono" icon="" />
+                <tech name="C#" icon="" />
+                <tech name="GTK" icon="" />
+                <tech name="Lib G-Streamer" icon="" />
+                <tech name="Linux" icon="" />>
+            </techs>
+        </project>
+
+        <project name="Tablet Touch Keyboard" url="" screenshot="keyboard-small.png">
+            <description>
+               Small, touch enabled on screen keyboard for tablets. Requires Mono,
+            </description>
+            <techs>
+                <tech name="Mono" icon="" />
+                <tech name="C#" icon="" />
+                <tech name="GTK" icon="" />
+                <tech name="Linux" icon="" />>
+            </techs>
+        </project>
+
+
+
+    </projects>
+
+    <education>
+        <school name="Univerity of Maryland" degree="Computer Science, Bachelors" location="College Park, MD" />
+        <school name="Howard Community College" degree="Mathematics, Associates" location="Columbia, MD" />
+        <school name="Howard Community College" degree="Computer Science, Associates" location="Columbia, MD" />
+    </education>
+
+
+
+</portfolio>

@@ -1,0 +1,249 @@
+{
+    "portfolio": {
+        "intro": {
+            "_avatar": "/images/headshot.jpg",
+            "_heading": "Julian Moyse",
+            "_subheading": "Full Stack Developer"
+        },
+        "about": "\n    I am a Software Developer and Computer Scientist. I graduated from the University of Marylandwith a Bachelors in Computer Science. I am a detail-oriented developer with an passion for writing clean, efficent and well maintained code. I pride myself in staying up to date with the latest technology and software design principles.\n\nCurrently working as a freelance web developer, but always open to new opportunities.\nLifelong geek, nerd and techie.\nFeel free to shoot me a message\n    ",
+        "contacts": {
+            "contact": [{
+                    "_name": "github.com/jmoyse",
+                    "_link": "github.com/jmoyse",
+                    "_icon": "github"
+                },
+                {
+                    "_name": "facebook.com/julianmoyse",
+                    "_link": "facebook.com/julianmoyse",
+                    "_icon": "facebook"
+                },
+                {
+                    "_name": "@julianmoyse",
+                    "_link": "twitter.com/julianmoyse",
+                    "_icon": "twitter"
+                },
+                {
+                    "_name": "Google+",
+                    "_link": "google.com/something",
+                    "_icon": "googleplus"
+                },
+                {
+                    "_name": "linkedin.com/in/julianmoyse",
+                    "_link": "linkedin.com/in/julianmoyse",
+                    "_icon": "linkedin"
+                },
+                {
+                    "_name": "hello@julianmoyse.com",
+                    "_link": "mailto:hello@julianmoyse.com",
+                    "_icon": "email"
+                }
+            ]
+        },
+        "projects": {
+            "project": [{
+                    "description": "\n                Mobile and Native Web multi-player word game. A modern and new twist on classic board games like Scrabble and Boggle. Supports hundreds of concurrent players with chat, score history and profiles. Cleanly written using a number of different modern languages and APIs. Broken up in a number of smaller projects.\n            ",
+                    "techs": {
+                        "tech": [{
+                                "_name": "Typescript",
+                                "_icon": "typescript"
+                            },
+                            {
+                                "_name": "Javascript",
+                                "_icon": "typescript"
+                            },
+                            {
+                                "_name": "React",
+                                "_icon": "typescript"
+                            },
+                            {
+                                "_name": "Redux",
+                                "_icon": "typescript"
+                            },
+                            {
+                                "_name": "Webpack",
+                                "_icon": "typescript"
+                            },
+                            {
+                                "_name": "HTML 5",
+                                "_icon": "typescript"
+                            },
+                            {
+                                "_name": "Material UI",
+                                "_icon": "typescript"
+                            }
+                        ]
+                    },
+                    "_name": "Word Coaster",
+                    "_url": "wordcoaster.fun",
+                    "_screenshot": "wordcoaster.png"
+                },
+                {
+                    "description": "\n                .NET version of the 2048 tile game\n            ",
+                    "techs": {
+                        "tech": [{
+                                "_name": "C#",
+                                "_icon": "csharp"
+                            },
+                            {
+                                "_name": ".NET Runtime",
+                                "_icon": "dotnet"
+                            }
+                        ]
+                    },
+                    "_name": "2048",
+                    "_url": "wordcoaster.fun",
+                    "_screenshot": "2048.png"
+                },
+                {
+                    "description": "\n               C++ implementation of the Data Structure used for efficent querying of 2-D objects. Supports efficent range queries and storage. Written for CMSC420 (Data Structures).\n            ",
+                    "techs": {
+                        "tech": [{
+                                "_name": "C++",
+                                "_icon": "cplusplus"
+                            },
+                            {
+                                "_name": "Linux",
+                                "_icon": "Linux"
+                            }
+                        ]
+                    },
+                    "_name": "Loose Quad-Tree Data Structure",
+                    "_url": "wordcoaster.fun",
+                    "_screenshot": "quadtree-example.png"
+                },
+                {
+                    "description": "\n               Running multi-threaded WebSocket backend. Accounts and game history stored in a SQlite database. Dockerized for scaleability. Deployable to Linux, Windows or MacOSX.\n            ",
+                    "techs": {
+                        "tech": [{
+                                "_name": ".NET Core",
+                                "_icon": "netcore"
+                            },
+                            {
+                                "_name": "C#",
+                                "_icon": "csharp"
+                            },
+                            {
+                                "_name": "WebSockets",
+                                "_icon": "WebSockets"
+                            },
+                            {
+                                "_name": "Docker",
+                                "_icon": "Docker"
+                            },
+                            {
+                                "_name": "SQLite",
+                                "_icon": "SQLite"
+                            }
+                        ]
+                    },
+                    "_name": "Word Coaster Server Back-end",
+                    "_url": "",
+                    "_screenshot": "gameserver1.png"
+                },
+                {
+                    "description": "\n               Microservice that efficently solves a board of any given size using a trie and depth-first traversal of the gameboard. Returns results in JSON (link) (source)\n            ",
+                    "techs": {
+                        "tech": [{
+                                "_name": "Node.js",
+                                "_icon": "cplusplus"
+                            },
+                            {
+                                "_name": "Express",
+                                "_icon": "csharp"
+                            },
+                            {
+                                "_name": "Typescript",
+                                "_icon": "csharp"
+                            },
+                            {
+                                "_name": "JSON",
+                                "_icon": "WebSockets"
+                            },
+                            {
+                                "_name": "Docker",
+                                "_icon": "Docker"
+                            }
+                        ]
+                    },
+                    "_name": "Game Solution Solver",
+                    "_url": "",
+                    "_screenshot": "solver.png"
+                },
+                {
+                    "description": "\n               XMMS clone mp3 player written for Mono for Linux.\n            ",
+                    "techs": {
+                        "tech": [{
+                                "_name": "Mono",
+                                "_icon": ""
+                            },
+                            {
+                                "_name": "C#",
+                                "_icon": ""
+                            },
+                            {
+                                "_name": "GTK",
+                                "_icon": ""
+                            },
+                            {
+                                "_name": "Lib G-Streamer",
+                                "_icon": ""
+                            },
+                            {
+                                "_name": "Linux",
+                                "_icon": ""
+                            }
+                        ],
+                        "__text": "\n                \n\n                \n\n                \n\n                \n\n                \n>\n            "
+                    },
+                    "_name": "XMMS Mp3 Player Clone",
+                    "_url": "",
+                    "_screenshot": "mp3player-screenshot.png"
+                },
+                {
+                    "description": "\n               Small, touch enabled on screen keyboard for tablets. Requires Mono,\n            ",
+                    "techs": {
+                        "tech": [{
+                                "_name": "Mono",
+                                "_icon": ""
+                            },
+                            {
+                                "_name": "C#",
+                                "_icon": ""
+                            },
+                            {
+                                "_name": "GTK",
+                                "_icon": ""
+                            },
+                            {
+                                "_name": "Linux",
+                                "_icon": ""
+                            }
+                        ],
+                        "__text": "\n                \n\n                \n\n                \n\n                \n>\n            "
+                    },
+                    "_name": "Tablet Touch Keyboard",
+                    "_url": "",
+                    "_screenshot": "gnome-tablet-input.png"
+                }
+            ]
+        },
+        "education": {
+            "school": [{
+                    "_name": "Univerity of Maryland",
+                    "_degree": "Computer Science, Bachelors",
+                    "_location": "College Park, MD"
+                },
+                {
+                    "_name": "Howard Community College",
+                    "_degree": "Mathematics, Associates",
+                    "_location": "Columbia, MD"
+                },
+                {
+                    "_name": "Howard Community College",
+                    "_degree": "Computer Science, Associates",
+                    "_location": "Columbia, MD"
+                }
+            ]
+        }
+    }
+}
