@@ -10,12 +10,7 @@ import Slider from 'react-slick';
 import DoneIcon from 'material-ui-icons/Done';
 import './Projects.css';
 
-//var images = require.context('../screenshots', false);
-
-//require('../screenshots/wordcoaster.png');
-
 const style = {
-
 
 };
 
@@ -43,9 +38,6 @@ export interface ProjectsState {
 }
 
 type ClassNames = keyof typeof style;
-//const wordcoasterImg = require('../screenshots/wordcoaster.png');
-//const game2048 = require('../screenshots/2048.png');
-
 
 class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<ClassNames>, ProjectsState> {
     private slider: Slider | null = null;
@@ -71,7 +63,7 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
             slidesToScroll: 1,
             adapativeHeight: true,
             adaptiveWidth: false,
-            lazyLoad: false,
+            lazyLoad: true,
             arrows: false,
             swipe: true,
             swipeToSlide: true,
@@ -82,11 +74,10 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
             <div className="lowerBody">
                 <Typography type="display2" paragraph={true} align="center" style={{ paddingBottom: '30px' }}>
                     Personal Projects
-                    </Typography>
+                </Typography>
                 <Grid>
                     <Grid
                         container={true}
-
                         alignItems="center"
                         direction="row"
                         justify="center"
@@ -103,12 +94,12 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                                 nextButton={
                                     < Button dense={true} onClick={(e) => (this.slider as Slider).slickNext()} >
                                         Next
-                                </Button>}
+                                    </Button>}
 
                                 backButton={
                                     <Button dense={true} onClick={() => (this.slider as Slider).slickPrev()} >
                                         Back
-                                </Button>}
+                                    </Button>}
                             />
                             <Slider ref={c => (this.slider = c)} {...settings} className="slider" >
                                 {((this.props.projects as any).project as Array<Object>).map(data =>
@@ -121,8 +112,6 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
 
                                             {/* project screenshot*/}
                                             <img
-
-
                                                 src={require('../screenshots/' + (data as any)._screenshot)}
                                                 width="auto"
                                                 height="auto"
@@ -130,9 +119,6 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
 
                                                 style={{
                                                     maxHeight: '50%', maxWidth: '50%',
-
-
-
                                                 }}
                                             />
 
@@ -157,21 +143,34 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                                                 <br />
                                             </div>
                                         </Grid>
+
+                                        {
+                                            (data as any)._url !== '' ?
+                                                (
+                                                    <Button raised={true} color="primary">
+                                                        Launch Site
+                                                    {/*<Icon className={classes.rightIcon}>send</Icon>*/}
+                                                    </Button>
+                                                ) : ''
+                                        }
+                                        {
+                                            (data as any)._github !== '' ?
+                                                (
+                                                    <Button raised={true} color="primary">
+                                                        Github
+                                                    {/*<Icon className={classes.rightIcon}>send</Icon>*/}
+                                                    </Button>
+                                                ) : ''
+                                        }
                                     </div>
+
+
                                 )}
+
                             </Slider>
                         </Paper>
-
                     </Grid>
                 </Grid>
-
-
-                <div className="projectsBody">
-                    <br />
-
-
-
-                </div >
             </div >
         );
     }

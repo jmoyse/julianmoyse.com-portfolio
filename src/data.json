@@ -5,7 +5,7 @@
             "_heading": "Julian Moyse",
             "_subheading": "Full Stack Developer"
         },
-        "about": "\n    I am a Software Developer and Computer Scientist. I graduated from the University of Marylandwith a Bachelors in Computer Science. I am a detail-oriented developer with an passion for writing clean, efficent and well maintained code. I pride myself in staying up to date with the latest technology and software design principles.\n\nCurrently working as a freelance web developer, but always open to new opportunities.\nLifelong geek, nerd and techie.\nFeel free to shoot me a message\n    ",
+        "about": "\n    I am a Software Developer and Computer Scientist. I graduated from the University of Maryland with a Bachelors in Computer Science. I am a detail-oriented developer with an passion for writing clean, efficent and well maintained code. I pride myself in staying up to date with the latest technology and software design principles.\n\n    Currently working as a freelance web developer, but always open to new opportunities.\n    Lifelong geek, nerd and techie.\n    Feel free to shoot me a message\n    ",
         "contacts": {
             "contact": [{
                     "_name": "github.com/jmoyse",
@@ -74,8 +74,9 @@
                         ]
                     },
                     "_name": "Word Coaster",
-                    "_url": "wordcoaster.fun",
-                    "_screenshot": "wordcoaster.png"
+                    "_url": "wordcoaster.julianmoyse.com",
+                    "_screenshot": "wordcoaster.png",
+                    "_github": ""
                 },
                 {
                     "description": "\n                .NET version of the 2048 tile game\n            ",
@@ -91,11 +92,12 @@
                         ]
                     },
                     "_name": "2048",
-                    "_url": "wordcoaster.fun",
-                    "_screenshot": "2048.png"
+                    "_url": "",
+                    "_screenshot": "2048.png",
+                    "_github": "github.com/something"
                 },
                 {
-                    "description": "\n               C++ implementation of the Data Structure used for efficent querying of 2-D objects. Supports efficent range queries and storage. Written for CMSC420 (Data Structures).\n            ",
+                    "description": "\n                Implemention of the the Quadtree Data Structure.\\n\n                C++ implementation of the Data Structure used for efficent querying of 2-D objects. Supports efficent range queries and storage. Written for CMSC420 (Data Structures).\n            ",
                     "techs": {
                         "tech": [{
                                 "_name": "C++",
@@ -108,8 +110,9 @@
                         ]
                     },
                     "_name": "Loose Quad-Tree Data Structure",
-                    "_url": "wordcoaster.fun",
-                    "_screenshot": "quadtree-example.png"
+                    "_url": "",
+                    "_screenshot": "showquad.png",
+                    "_github": "github.com/something"
                 },
                 {
                     "description": "\n               Running multi-threaded WebSocket backend. Accounts and game history stored in a SQlite database. Dockerized for scaleability. Deployable to Linux, Windows or MacOSX.\n            ",
@@ -138,10 +141,12 @@
                     },
                     "_name": "Word Coaster Server Back-end",
                     "_url": "",
-                    "_screenshot": "gameserver1.png"
+                    "_screenshot": "gameserver1.png",
+                    "_github": "",
+                    "__text": ">\n            \n\n            \n\n        "
                 },
                 {
-                    "description": "\n               Microservice that efficently solves a board of any given size using a trie and depth-first traversal of the gameboard. Returns results in JSON (link) (source)\n            ",
+                    "description": "\n               Microservice that efficently solves a board of any given size using a Trie and depth-first traversal of the gameboard. Returns results in JSON (link) (source)\n            ",
                     "techs": {
                         "tech": [{
                                 "_name": "Node.js",
@@ -166,11 +171,12 @@
                         ]
                     },
                     "_name": "Game Solution Solver",
-                    "_url": "",
-                    "_screenshot": "solver.png"
+                    "_url": "https://julianmoyse.com:3000/solver?tiles=RILLEPVPIEUOOONU",
+                    "_screenshot": "solver2.png",
+                    "_github": "github.com/something"
                 },
                 {
-                    "description": "\n               XMMS clone mp3 player written for Mono for Linux.\n            ",
+                    "description": "\n            Music player application written to match the basic look and feel of standard three-panel MP3 player applications. Functionality similar to XMMS, Foobar200 and WinAmp. The application is designed to be lightweight with a small memory. \n\n            Written in Mono and C#, allowing the application to run on variety of different systems provided the system has access to GTK, GTK-Sharp and LibGstreamer. Supports adding songs from local folders, creating playlists and standard playing functions.\n\n            Runs of Linux, Unix, MacOSX and Windows\n\n            ",
                     "techs": {
                         "tech": [{
                                 "_name": "Mono",
@@ -197,7 +203,8 @@
                     },
                     "_name": "XMMS Mp3 Player Clone",
                     "_url": "",
-                    "_screenshot": "mp3player-screenshot.png"
+                    "_screenshot": "mp3player-screenshot.png",
+                    "_github": "github.com/something"
                 },
                 {
                     "description": "\n               Small, touch enabled on screen keyboard for tablets. Requires Mono,\n            ",
@@ -223,7 +230,8 @@
                     },
                     "_name": "Tablet Touch Keyboard",
                     "_url": "",
-                    "_screenshot": "gnome-tablet-input.png"
+                    "_screenshot": "keyboard-small.png",
+                    "_github": "github.com/something"
                 }
             ]
         },
