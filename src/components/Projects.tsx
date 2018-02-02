@@ -9,6 +9,7 @@ import Grid from 'material-ui/Grid/Grid';
 import Slider from 'react-slick';
 import DoneIcon from 'material-ui-icons/Done';
 import './Projects.css';
+import Section from './Section';
 
 const style = {
 
@@ -26,7 +27,8 @@ type projectsType = {
     _name: string;
     _url: string;
     _screenshot: string;
-};*/
+};
+*/
 
 export interface ProjectsProps {
     projects: Object;
@@ -44,7 +46,7 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
 
     constructor (props: ProjectsProps & WithStyles<ClassNames>) {
         super(props);
-        console.log(props.projects);
+        //console.log(props.projects);
         this.state = {
             selectedSliderIndex: 0,
         };
@@ -71,10 +73,7 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
         };
 
         return (
-            <div className="lowerBody">
-                <Typography type="display2" paragraph={true} align="center" style={{ paddingBottom: '30px' }}>
-                    Personal Projects
-                </Typography>
+            <Section id="projectsLink" title="Personal Projects" background="#EFEFEF">
                 <Grid>
                     <Grid
                         container={true}
@@ -82,7 +81,7 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                         direction="row"
                         justify="center"
                     >
-                        <Paper elevation={15} style={{ padding: '20px', display: 'block', minWidth: '0px', }}   >
+                        <Paper elevation={15} style={{ padding: '20px', display: 'block', minWidth: '0px', maxWidth: '90%' }}   >
                             <MobileStepper
                                 type="dots"
                                 steps={((this.props.projects as any).project as any).length}
@@ -104,7 +103,7 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                             <Slider ref={c => (this.slider = c)} {...settings} className="slider" >
                                 {((this.props.projects as any).project as Array<Object>).map(data =>
                                     <div className="singleProjectDiv" key={(data as any)._name}>
-                                        <Grid style={{ height: '100%', width: '100%' }}>
+                                        <Grid style={{ height: '100%', width: '100%', paddingBottom: '20px' }}>
                                             {/* project title*/}
                                             <Typography type="headline" paragraph={true}>
                                                 {(data as any)._name}
@@ -125,7 +124,7 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                                             {/* description and tech Grid*/}
 
                                         </Grid>
-                                        <Grid wrap="wrap" >
+                                        <Grid wrap="wrap" style={{ paddingBottom: '20px' }} >
                                             <Typography paragraph={true}>
                                                 {(data as any).description}
                                             </Typography>
@@ -142,36 +141,52 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                                                 )}
                                                 <br />
                                             </div>
+
+                                            <div style={{ paddingTop: '10px' }}>
+                                                {
+                                                    (data as any)._url !== '' ?
+                                                        (
+                                                            <Button
+                                                                style={{ margin: '5px' }}
+                                                                raised={true}
+                                                                color="primary"
+                                                                onClick={
+                                                                    (e) => window.open((data as any)._url)
+                                                                }
+
+                                                            >
+                                                                Launch Site
+                                                    {/*<Icon className={classes.rightIcon}>send</Icon>*/}
+                                                            </Button>
+                                                        ) : ''
+                                                }
+                                                {
+                                                    (data as any)._github !== '' ?
+                                                        (
+                                                            <Button
+                                                                style={{ margin: '5px' }}
+                                                                raised={true}
+                                                                color="primary"
+                                                                onClick={
+                                                                    (e) => window.open((data as any)._github)
+                                                                }
+                                                            >
+                                                                Github
+                                                    {/*<Icon className={classes.rightIcon}>send</Icon>*/}
+                                                            </Button>
+                                                        ) : ''
+                                                }
+                                            </div>
                                         </Grid>
 
-                                        {
-                                            (data as any)._url !== '' ?
-                                                (
-                                                    <Button raised={true} color="primary">
-                                                        Launch Site
-                                                    {/*<Icon className={classes.rightIcon}>send</Icon>*/}
-                                                    </Button>
-                                                ) : ''
-                                        }
-                                        {
-                                            (data as any)._github !== '' ?
-                                                (
-                                                    <Button raised={true} color="primary">
-                                                        Github
-                                                    {/*<Icon className={classes.rightIcon}>send</Icon>*/}
-                                                    </Button>
-                                                ) : ''
-                                        }
                                     </div>
-
-
                                 )}
 
                             </Slider>
                         </Paper>
                     </Grid>
                 </Grid>
-            </div >
+            </Section >
         );
     }
 }

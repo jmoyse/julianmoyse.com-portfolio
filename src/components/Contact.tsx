@@ -7,10 +7,9 @@ import ListItem from 'material-ui/List/ListItem';
 import ListItemIcon from 'material-ui/List/ListItemIcon';
 import ListItemText from 'material-ui/List/ListItemText';
 import * as FontAwesome from 'react-fontawesome';
-import './Contact.css';
-
 import Tabs from 'material-ui/Tabs/Tabs';
 import Tab from 'material-ui/Tabs/Tab';
+import './Contact.css';
 
 const style = {
 
@@ -40,7 +39,8 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                         verticalAlign: 'top',
                         alignSelf: 'center',
                         paddingTop: '20px',
-                    }}
+                    }
+                }
             >
 
                 <Grid
@@ -60,14 +60,23 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
 
                                 <Paper elevation={15}  >
 
-                                    <Tabs value={0} fullWidth={true}>
-                                        <Tab label=" Contact" fullWidth={true} />
-
+                                    <Tabs
+                                        centered={true}
+                                        value={0}
+                                        width="500px"
+                                        fullWidth={true}
+                                        style={{ width: '100%' }}
+                                    >
+                                        <Tab label="Contact" style={{ width: '100%' }} />
                                     </Tabs>
 
                                     <List >
 
-                                        <ListItem button={true} divider={true}>
+                                        <ListItem
+                                            button={true}
+                                            divider={true}
+                                            onClick={(e) => window.open('http://www.github.com/jmoyse')}
+                                        >
 
                                             <ListItemIcon>
                                                 <FontAwesome
@@ -76,14 +85,17 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                                                     size="2x"
                                                     style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
                                                 />
-
                                             </ListItemIcon>
 
                                             <ListItemText primary="github.com/jmoyse" />
 
                                         </ListItem>
 
-                                        <ListItem button={true} divider={true} >
+                                        <ListItem
+                                            button={true}
+                                            divider={true}
+                                            onClick={(e) => window.open('http://www.facebook.com/julianmoyse')}
+                                        >
                                             <ListItemIcon>
                                                 <FontAwesome
                                                     className="contactIconDiv"
@@ -94,9 +106,12 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                                             </ListItemIcon>
                                             <ListItemText primary="facebook.com/julianmoyse" />
                                         </ListItem>
+                                        <ListItem
+                                            button={true}
+                                            divider={true}
+                                            onClick={(e) => window.open('http://www.twitter.com/julianmoyse')}
+                                        >
 
-
-                                        <ListItem button={true} divider={true} >
                                             <ListItemIcon>
                                                 <FontAwesome
                                                     className="contactIconDiv"
@@ -107,9 +122,11 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                                             </ListItemIcon>
                                             <ListItemText primary="@julianmoyse" />
                                         </ListItem>
-
-
-                                        <ListItem button={true} divider={true} >
+                                        <ListItem
+                                            button={true}
+                                            divider={true}
+                                            onClick={(e) => window.open('http://www.twitter.com/julianmoyse')}
+                                        >
                                             <ListItemIcon>
                                                 <FontAwesome
                                                     className="contactIconDiv"
@@ -121,7 +138,12 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                                             <ListItemText primary="Google+" />
                                         </ListItem>
 
-                                        <ListItem button={true} divider={true} >
+                                        <ListItem
+                                            button={true}
+                                            divider={true}
+                                            onClick={(e) => window.open('http://www.linkedin.com/in/julianmoyse')}
+                                        >
+
                                             <ListItemIcon>
                                                 <FontAwesome
                                                     className="contactIconDiv"
@@ -133,7 +155,11 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                                             <ListItemText primary="linkedin.com/in/julianmoyse" />
                                         </ListItem>
 
-                                        <ListItem button={true} divider={true} >
+                                        <ListItem
+                                            button={true}
+                                            divider={true}
+                                            onClick={(e) => window.open('mailto:hello@julianmoyse.com')}
+                                        >
                                             <ListItemIcon>
                                                 <FontAwesome
                                                     className="contactIconDiv"

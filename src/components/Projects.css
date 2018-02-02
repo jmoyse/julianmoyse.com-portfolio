@@ -2,8 +2,6 @@
       align-content: center;
   }
 
-  .projectDescription {}
-
   .projectHeaderText {
       color: #23527c;
       margin-left: 2px;
@@ -18,18 +16,6 @@
       background: -webkit-linear-gradient(to left, #D3D3D3, #BCBCBC, #D3D3D3);
       /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to left, #EAEAEA, #D3D3D3, #EAEAEA);
-  }
-
-  .lowerBody {
-      background: #D3D3D3;
-      background: -webkit-linear-gradient(to left, #D3D3D3, #BCBCBC, #D3D3D3);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to left, #EAEAEA, #D3D3D3, #EAEAEA);
-      align-self: center;
-      align-items: center;
-      display: block;
-      padding-top: 50px;
-      padding-bottom: 50px;
   }
 
   .singleProjectDiv {

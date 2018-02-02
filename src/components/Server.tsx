@@ -3,6 +3,9 @@ import Typography from 'material-ui/Typography/Typography';
 import { withStyles, WithStyles } from 'material-ui/styles';
 import './Server.css';
 import Button from 'material-ui/Button/Button';
+import Section from './Section';
+import Paper from 'material-ui/Paper/Paper';
+import Grid from 'material-ui/Grid/Grid';
 
 const style = {
 
@@ -25,18 +28,21 @@ class ServerComponent extends React.Component<ServerProps & WithStyles<ClassName
 
     render () {
         return (
-            <div id="ServerBody" className="lowerBody">
+            <Section id="serverLink" title="Server" background="#EFEFEF">
 
-                <div className="intro">
-                    <div>
-                        <div>
-                            <Typography type="display2" paragraph={true} align="center" style={{ paddingBottom: '30px' }}>
-                                Server
-                    </Typography>
-                        </div>
+                <Grid
+                    container={true}
+                    alignItems="center"
+                    direction="row"
+                    justify="center"
+                >
+
+                    <Paper elevation={15} style={{ padding: '20px', display: 'block', minWidth: '0px', maxWidth: '90%' }}>
+
+
                         <div className="projectsContainer">
                             <Typography type="title" gutterBottom={true}>
-                                Hosted on a Virtual Private Server courtsy of
+                                Hosted on a Virtual Private Server courtesy of
                                 <Button href="www.vultr.com">Vultr.com</Button><br />
                                 Source hosted on Github and locally. SSL from LetsEncrypt<br />
                                 2.0GB memory and 100GB SSD<br />
@@ -81,10 +87,12 @@ class ServerComponent extends React.Component<ServerProps & WithStyles<ClassName
                                 <Button href="https://hub.docker.com/r/linuxserver/letsencrypt/">docker/letsencrypt</Button>
                             </div>
                         </div >
-                    </div>
 
-                </div >
-            </div>
+                    </Paper>
+
+
+                </Grid>
+            </Section>
         );
     }
 }

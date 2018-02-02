@@ -8,6 +8,7 @@ import Grid from 'material-ui/Grid/Grid';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
 import ListItemIcon from 'material-ui/List/ListItemIcon';
+import Section from './Section';
 
 const style = {
 
@@ -30,91 +31,82 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
 
     render () {
         return (
-            <div id="EducationBody" className="lowerBody">
-                <div>
-                    <Typography type="display2" paragraph={true} align="center" style={{ paddingBottom: '30px' }}>
-                        Education
-                    </Typography>
-                    <div className="projectsContainer">
-                        <Grid
-                            container={true}
-                            spacing={24}
-                        >
-                            <Grid item={true} xs={12}>
-                                <Grid
-                                    container={true}
-                                    alignItems="center"
-                                    direction="row"
-                                    justify="center"
-                                >
-                                    <div className="contactBody">
-                                        <Paper elevation={15} >
-                                            <List >
-                                                <ListItem  >
+            <Section id="educationLink" title="Education" background="white">
 
-                                                    <ListItemIcon style={{ height: '75px', width: '75px' }}>
-                                                        <img src={umd} />
-                                                    </ListItemIcon>
 
-                                                    <Grid>
-                                                        <Typography type="title" gutterBottom={true}>
-                                                            Computer Science, Bachelors
-                                                        </Typography>
-                                                        <Typography type="subheading" gutterBottom={true} >
-                                                            University of Maryland
-                                                        </Typography>
-                                                        <Typography type="body2" gutterBottom={true}>
-                                                            College Park, MD
-                                                        </Typography>
-                                                    </Grid>
-                                                </ListItem>
-                                                <Divider />
-                                                <ListItem  >
+                <Grid
+                    container={true}
+                    alignItems="center"
+                    direction="row"
+                    justify="center"
+                >
 
-                                                    <ListItemIcon style={{ height: '75px', width: '75px' }}>
-                                                        <img src={hcc} />
-                                                    </ListItemIcon>
+                    <Paper elevation={15} style={{ maxWidth: '90%' }} >
+                        <List >
+                            <ListItem  >
 
-                                                    <Grid >
-                                                        <Typography type="title" gutterBottom={true}>
-                                                            Mathematics, Associates of Arts
-                                                        </Typography>
-                                                        <Typography type="subheading" gutterBottom={true} >
-                                                            Howard Community College
-                                                        </Typography>
-                                                        <Typography type="body2" gutterBottom={true}>
-                                                            Columbia, MD
-                                                        </Typography>
-                                                    </Grid>
-                                                </ListItem>
-                                                <Divider />
-                                                <ListItem  >
+                                <ListItemIcon style={{ height: '75px', width: '75px' }}>
+                                    <img src={umd} />
+                                </ListItemIcon>
 
-                                                    <ListItemIcon style={{ height: '75px', width: '75px' }}>
-                                                        <img src={hcc} />
-                                                    </ListItemIcon>
-
-                                                    <Grid>
-                                                        <Typography type="title" gutterBottom={true}>
-                                                            Computer Science, Associates of Arts
+                                <Grid>
+                                    <Typography type="title" >
+                                        Computer Science - Bachelors of Science
                                                         </Typography>
-                                                        <Typography type="subheading" gutterBottom={true} >
-                                                            Howard Community College
+                                    <Typography type="subheading" style={{ paddingBottom: '0px' }}>
+                                        University of Maryland
                                                         </Typography>
-                                                        <Typography type="body2" gutterBottom={true}>
-                                                            Columbia, MD
+                                    <Typography type="body2" style={{ paddingBottom: '0px' }}>
+                                        College Park, MD
                                                         </Typography>
-                                                    </Grid>
-                                                </ListItem>
-                                            </List>
-                                        </Paper>
-                                    </div>
                                 </Grid>
-                            </Grid>
-                        </Grid>
-                    </div>
-                </div >
-            </div >
+                            </ListItem>
+                            <Divider />
+                            <ListItem  >
+
+                                <ListItemIcon style={{ height: '75px', width: '75px' }}>
+                                    <img src={hcc} />
+                                </ListItemIcon>
+
+                                <Grid >
+                                    <Typography type="title">
+                                        Mathematics - Associates of Arts
+                                                        </Typography>
+                                    <Typography type="subheading" style={{ paddingBottom: '0px' }}>
+                                        Howard Community College
+                                                        </Typography>
+                                    <Typography type="body2" style={{ paddingBottom: '0px' }}>
+                                        Columbia, MD
+                                    </Typography>
+                                </Grid>
+                            </ListItem>
+                            <Divider />
+                            <ListItem  >
+
+                                <ListItemIcon style={{ height: '75px', width: '75px' }}>
+                                    <img src={hcc} />
+                                </ListItemIcon>
+
+                                <Grid>
+                                    <Typography type="title" >
+                                        Computer Science - Associates of Arts
+                                                        </Typography>
+                                    <Typography type="subheading" style={{ paddingBottom: '0px' }}>
+                                        Howard Community College
+                                    </Typography>
+                                    <Typography type="body2" style={{ paddingBottom: '0px' }}>
+                                        Columbia, MD
+                                    </Typography>
+                                </Grid>
+                            </ListItem>
+                        </List>
+                    </Paper>
+
+                </Grid>
+
+
+
+            </Section>
         );
     }
 }

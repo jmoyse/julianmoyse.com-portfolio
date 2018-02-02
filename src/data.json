@@ -7,7 +7,8 @@
         },
         "about": "\n    I am a Software Developer and Computer Scientist. I graduated from the University of Maryland with a Bachelors in Computer Science. I am a detail-oriented developer with an passion for writing clean, efficent and well maintained code. I pride myself in staying up to date with the latest technology and software design principles.\n\n    Currently working as a freelance web developer, but always open to new opportunities.\n    Lifelong geek, nerd and techie.\n    Feel free to shoot me a message\n    ",
         "contacts": {
-            "contact": [{
+            "contact": [
+                {
                     "_name": "github.com/jmoyse",
                     "_link": "github.com/jmoyse",
                     "_icon": "github"
@@ -40,10 +41,12 @@
             ]
         },
         "projects": {
-            "project": [{
+            "project": [
+                {
                     "description": "\n                Mobile and Native Web multi-player word game. A modern and new twist on classic board games like Scrabble and Boggle. Supports hundreds of concurrent players with chat, score history and profiles. Cleanly written using a number of different modern languages and APIs. Broken up in a number of smaller projects.\n            ",
                     "techs": {
-                        "tech": [{
+                        "tech": [
+                            {
                                 "_name": "Typescript",
                                 "_icon": "typescript"
                             },
@@ -74,14 +77,15 @@
                         ]
                     },
                     "_name": "Word Coaster",
-                    "_url": "wordcoaster.julianmoyse.com",
+                    "_url": "http://wordcoaster.julianmoyse.com",
                     "_screenshot": "wordcoaster.png",
                     "_github": ""
                 },
                 {
                     "description": "\n                .NET version of the 2048 tile game\n            ",
                     "techs": {
-                        "tech": [{
+                        "tech": [
+                            {
                                 "_name": "C#",
                                 "_icon": "csharp"
                             },
@@ -94,12 +98,13 @@
                     "_name": "2048",
                     "_url": "",
                     "_screenshot": "2048.png",
-                    "_github": "github.com/something"
+                    "_github": "https://www.github.com/something"
                 },
                 {
-                    "description": "\n                Implemention of the the Quadtree Data Structure.\\n\n                C++ implementation of the Data Structure used for efficent querying of 2-D objects. Supports efficent range queries and storage. Written for CMSC420 (Data Structures).\n            ",
+                    "description": "\n                Implemention of the the Quadtree Data Structure.\n                C++ implementation of the Data Structure used for efficent querying of 2-D objects. Supports efficent range queries and storage. Written for CMSC420 (Data Structures).\n            ",
                     "techs": {
-                        "tech": [{
+                        "tech": [
+                            {
                                 "_name": "C++",
                                 "_icon": "cplusplus"
                             },
@@ -112,12 +117,13 @@
                     "_name": "Loose Quad-Tree Data Structure",
                     "_url": "",
                     "_screenshot": "showquad.png",
-                    "_github": "github.com/something"
+                    "_github": "https://www.github.com/something"
                 },
                 {
                     "description": "\n               Running multi-threaded WebSocket backend. Accounts and game history stored in a SQlite database. Dockerized for scaleability. Deployable to Linux, Windows or MacOSX.\n            ",
                     "techs": {
-                        "tech": [{
+                        "tech": [
+                            {
                                 "_name": ".NET Core",
                                 "_icon": "netcore"
                             },
@@ -146,9 +152,10 @@
                     "__text": ">\n            \n\n            \n\n        "
                 },
                 {
-                    "description": "\n               Microservice that efficently solves a board of any given size using a Trie and depth-first traversal of the gameboard. Returns results in JSON (link) (source)\n            ",
+                    "description": "\n               Microservice that efficently solves a board of any given size using a Trie and depth-first traversal of the gameboard. Returns results in JSON.\n            ",
                     "techs": {
-                        "tech": [{
+                        "tech": [
+                            {
                                 "_name": "Node.js",
                                 "_icon": "cplusplus"
                             },
@@ -173,12 +180,13 @@
                     "_name": "Game Solution Solver",
                     "_url": "https://julianmoyse.com:3000/solver?tiles=RILLEPVPIEUOOONU",
                     "_screenshot": "solver2.png",
-                    "_github": "github.com/something"
+                    "_github": "https://www.github.com/something"
                 },
                 {
                     "description": "\n            Music player application written to match the basic look and feel of standard three-panel MP3 player applications. Functionality similar to XMMS, Foobar200 and WinAmp. The application is designed to be lightweight with a small memory. \n\n            Written in Mono and C#, allowing the application to run on variety of different systems provided the system has access to GTK, GTK-Sharp and LibGstreamer. Supports adding songs from local folders, creating playlists and standard playing functions.\n\n            Runs of Linux, Unix, MacOSX and Windows\n\n            ",
                     "techs": {
-                        "tech": [{
+                        "tech": [
+                            {
                                 "_name": "Mono",
                                 "_icon": ""
                             },
@@ -204,12 +212,13 @@
                     "_name": "XMMS Mp3 Player Clone",
                     "_url": "",
                     "_screenshot": "mp3player-screenshot.png",
-                    "_github": "github.com/something"
+                    "_github": "https://www.github.com/something"
                 },
                 {
                     "description": "\n               Small, touch enabled on screen keyboard for tablets. Requires Mono,\n            ",
                     "techs": {
-                        "tech": [{
+                        "tech": [
+                            {
                                 "_name": "Mono",
                                 "_icon": ""
                             },
@@ -231,12 +240,13 @@
                     "_name": "Tablet Touch Keyboard",
                     "_url": "",
                     "_screenshot": "keyboard-small.png",
-                    "_github": "github.com/something"
+                    "_github": "https://www.github.com/something"
                 }
             ]
         },
         "education": {
-            "school": [{
+            "school": [
+                {
                     "_name": "Univerity of Maryland",
                     "_degree": "Computer Science, Bachelors",
                     "_location": "College Park, MD"
@@ -250,6 +260,70 @@
                     "_name": "Howard Community College",
                     "_degree": "Computer Science, Associates",
                     "_location": "Columbia, MD"
+                }
+            ]
+        },
+        "skills": {
+            "skill": [
+                {
+                    "_name": "C#/.NET",
+                    "_icon": "dotnet.png",
+                    "_score": "90"
+                },
+                {
+                    "_name": "Java",
+                    "_icon": "java.png",
+                    "_score": "60"
+                },
+                {
+                    "_name": "C++",
+                    "_icon": "cplusplus.png",
+                    "_score": "60"
+                },
+                {
+                    "_name": "Javascript",
+                    "_icon": "javascript.png",
+                    "_score": "90"
+                },
+                {
+                    "_name": "Typescript",
+                    "_icon": "typescript.png",
+                    "_score": "90"
+                },
+                {
+                    "_name": "React",
+                    "_icon": "react.png",
+                    "_score": "80"
+                },
+                {
+                    "_name": "Redux",
+                    "_icon": "redux.png",
+                    "_score": "80"
+                },
+                {
+                    "_name": "Node.JS",
+                    "_icon": "nodejs.png",
+                    "_score": "90"
+                },
+                {
+                    "_name": "Python",
+                    "_icon": "python.png",
+                    "_score": "65"
+                },
+                {
+                    "_name": "PostreSQL",
+                    "_icon": "postgres.png",
+                    "_score": "92"
+                },
+                {
+                    "_name": "MongoDB",
+                    "_icon": "mongodb.png",
+                    "_score": "80"
+                },
+                {
+                    "_name": "MySQL",
+                    "_icon": "mysql.png",
+                    "_score": "85"
                 }
             ]
         }

@@ -1,9 +1,9 @@
 import * as React from 'react';
-import MenuIcon from 'material-ui-icons/Menu';
+// import MenuIcon from 'material-ui-icons/Menu';
 import Reboot from 'material-ui/Reboot/Reboot';
 import AppBar from 'material-ui/AppBar/AppBar';
 import Toolbar from 'material-ui/Toolbar/Toolbar';
-import IconButton from 'material-ui/IconButton/IconButton';
+// import IconButton from 'material-ui/IconButton/IconButton';
 import Intro from './components/Intro';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -20,26 +20,45 @@ import Button from 'material-ui/Button/Button';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
 import Fade from 'material-ui/transitions/Fade';
+import Grid from 'material-ui/Grid/Grid';
 
 var xml = require('./data.json');
 
 const theme = createMuiTheme({
-
   palette: {
     primary: {
-      light: '#FFFFFF',
-      main: '#3f50b5',
+      light: 'rgba(33,33,33,0.72)',
+      main: '#606060',
       dark: '#002884',
       contrastText: '#fff',
     },
     secondary: {
-      light: '#ff7961',
-      main: '#f44336',
+      light: '#2196f3',
+      main: '#2196f3',
       dark: '#ba000d',
       contrastText: '#000',
     },
 
   },
+
+
+
+  /*
+    palette: {
+      primary1Color: coblue500,
+      primary2Color: blue700,
+      primary3Color: lightBlack,
+      accent1Color: purpleA200,
+      accent2Color: blueGrey100,
+      accent3Color: blueGrey500,
+      textColor: darkBlack,
+      alternateTextColor: white,
+      canvasColor: white,
+      borderColor: grey300,
+      disabledColor: fade(darkBlack, 0.3),
+      pickerHeaderColor: blue500,
+    },
+  */
 
 });
 export interface PortfolioProps {
@@ -97,14 +116,14 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
   }
 
   onArrowMouseDown = () => {
-    this.scrollTo('aboutBody', 'easeOutQuad', true);
+    this.scrollTo('aboutSection', 'easeOutQuad', true);
     this.setScrolling();
     this.setAppBarVisible(true);
 
   }
 
   onArrowMouseUp = () => {
-    this.scrollTo('top', 'easeOutQuad', true);
+    this.scrollTo('headerSection', 'easeOutQuad', true);
     this.setScrolling();
     this.setAppBarVisible(false);
   }
@@ -140,30 +159,43 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
         <Reboot />
         <section id="headerSection" />
         <MuiThemeProvider theme={theme}>
-
-
           <div hidden={!this.state.appBarVisible}>
             <Fade in={true} >
-              <AppBar position="fixed" >
-                <Toolbar>
-                  <IconButton color="contrast" aria-label="Menu">
-                    <MenuIcon />
-                  </IconButton>
-                  <Button color="contrast" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
-                    About
-                  </Button>
-                  <Button color="contrast" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
-                    Contact
-                </Button>
-                  <Button color="contrast" onClick={() => this.scrollTo('projectsSection', 'easeOutQuad', false)}>
-                    Projects
-                </Button>
-                  <Button color="contrast" onClick={() => this.scrollTo('educationSection', 'easeOutQuad', false)}>
-                    Education
-                </Button>
-                  <Button color="contrast" onClick={() => this.scrollTo('skillsSection', 'easeOutQuad', false)}>
-                    Skills
-                </Button>
+              <AppBar position="fixed">
+                <Toolbar >
+                  {
+                    /*
+                    <IconButton color="contrast" aria-label="Menu">
+                      <MenuIcon />
+                    </IconButton>
+                    */
+                  }
+                  <Grid
+                    alignItems="center"
+                    alignContent="center"
+                    direction="row"
+                    justify="center"
+                    container={true}
+
+                  >
+
+                    <Button dense={true} color="contrast" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
+                      About
+                    </Button>
+                    <Button dense={true} color="contrast" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
+                      Contact
+                    </Button>
+                    <Button dense={true} color="contrast" onClick={() => this.scrollTo('skillsSection', 'easeOutQuad', false)}>
+                      Skills
+                    </Button>
+                    <Button dense={true} color="contrast" onClick={() => this.scrollTo('projectsSection', 'easeOutQuad', false)}>
+                      Projects
+                    </Button>
+                    <Button dense={true} color="contrast" onClick={() => this.scrollTo('educationSection', 'easeOutQuad', false)}>
+                      Education
+                    </Button>
+
+                  </Grid>
                 </Toolbar>
               </AppBar>
             </Fade>
@@ -177,17 +209,16 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
           <section id="aboutSection">
             <About />
           </section>
+          <section id="skillsSection">
+            <Skills skills={xml.portfolio.skills} />
+          </section>
           <section id="projectsSection">
             <Projects
               projects={xml.portfolio.projects}
             />
-
           </section>
           <section id="educationSection">
             <Education />
-          </section>
-          <section id="skillsSection">
-            <Skills />
           </section>
           <section id="serverSection">
             <Server />

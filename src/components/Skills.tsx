@@ -1,83 +1,175 @@
 import * as React from 'react';
 import { withStyles, WithStyles } from 'material-ui/styles';
 import './Skills.css';
-import Typography from 'material-ui/Typography/Typography';
 import Grid from 'material-ui/Grid/Grid';
+import Section from './Section';
+import Typography from 'material-ui/Typography/Typography';
+import LinearProgress from 'material-ui/Progress/LinearProgress';
+import Paper from 'material-ui/Paper/Paper';
+
+// import Typography from 'material-ui/Typography/Typography';
 
 const style = {
 
 };
+//const js = require('../icons/javascript.png');
+//const react = require('../icons/react.png');
+//const redux = require('../icons/redux.png');
+
+/*
 const es6 = require('../icons/es6.png');
 const js = require('../icons/javascript.png');
 const ts = require('../icons/typescript-icon.png');
 const react = require('../icons/react.png');
-const redux = require('../icons/redux.png');
+
+*/
 
 export interface SkillsProps {
-
+    skills: Object;
 }
 export interface SkillsState {
 
 }
+/*
+
+const skillList = {
+    { 'TypeScript': 25 },
+'React': 75,
+    'Javascript': 75,
+        'C#': 75,
+};*/
 
 type ClassNames = keyof typeof style;
 
 class SkillsComponent extends React.Component<SkillsProps & WithStyles<ClassNames>, SkillsState> {
     constructor (props: SkillsProps & WithStyles<ClassNames>) {
         super(props);
+    }
 
+    componentWillReceiveProps (props: SkillsProps) {
+        console.log(props);
     }
 
     render () {
         return (
-            <div id="SkillsBody" className="lowerBody">
-                <Typography type="display2" paragraph={true} align="center" style={{ paddingBottom: '30px' }}>
+            <Section id="skillsLink" title="Skills" background="">
+                <Grid
+                    container={true}
+                    alignItems="center"
+                    direction="row"
+                    justify="center"
+                >
 
-                    Professional skills
-                </Typography>
-                <Grid>
-                    <Grid
-                        container={true}
-                        alignItems="center"
-                        direction="row"
-                        justify="center"
-                    >
+                    <Paper elevation={15} style={{ padding: '20px', display: 'block', minWidth: '0px', maxWidth: '90%' }}>
+                        <Typography paragraph={true} style={{ maxWidth: '700px' }}>
+                            Worked primarily with JavaScript, Python and C++, with frameworks such as Express.js, Koa.js, React.js, Django and Flask.
+
+Interested in functional programming and serverless architectures, exploring with Erlang and AWS Lambda respectively.
+                        </Typography>
                         <Grid
                             container={true}
+                            alignContent="center"
                             justify="center"
+                            style={
+                                {
+                                    maxWidth: '700px',
+                                    paddingTop: '20px',
+                                    paddingBottom: '20px'
+                                }
+                            }
                         >
-                            <img src={es6} height="75px" style={{ padding: '5px' }} />
-                        </Grid>
-                        <Grid
-                            container={true}
-                            justify="center"
-                        >
-                            <img src={ts} height="75px" style={{ padding: '5px' }} />
-                        </Grid>
-                        <Grid
-                            container={true}
-                            justify="center"
-                        >
-                            <img src={js} height="75px" style={{ padding: '5px' }} />
-                        </Grid>
-                        <Grid
-                            container={true}
-                            justify="center"
-                        >
-                            <img src={react} height="75px" style={{ padding: '5px' }} />
-                        </Grid>
-                        <Grid
-                            container={true}
-                            justify="center"
-                        >
-                            <img src={redux} height="75px" style={{ padding: '5px' }} />
+                            {
+                                //((Array.as any).project as Array<Object>).map(data =>
+                            }
+                            {
+                                this.props.skills !== undefined ?
+                                    (((this.props.skills as any).skill as Array<Object>).map(data =>
+                                        <Grid item={true} xs={true} key={(data as any)._name}>
+                                            <div
+
+                                                style={
+                                                    {
+                                                        display: 'flex',
+                                                        wrapOption: 'noWrap',
+                                                        flexDirection: 'row',
+
+                                                        verticalAlign: 'center',
+                                                    }
+                                                }
+                                            >
+                                                <div style={{ width: '50px' }}>
+                                                    <img
+                                                        src={require('../icons/' + (data as any)._icon)}
+                                                        width="auto"
+                                                        height="auto"
+                                                        draggable={false}
+
+                                                        style={{
+                                                            maxHeight: '35px',
+                                                            maxWidth: '35px'
+                                                        }}
+                                                    />
+                                                </div>
+
+                                                <div
+                                                    style={
+                                                        {
+                                                            display: 'flex',
+                                                            verticalAlign: 'center',
+                                                            alignItems: 'baseline',
+                                                            justifyContent: 'flex-start'
+                                                        }
+                                                    }
+                                                >
+                                                    <LinearProgress
+                                                        color="primary"
+                                                        mode="determinate"
+                                                        value={(data as any)._score}
+                                                        style={
+                                                            {
+                                                                position: 'relative',
+                                                                display: 'block',
+                                                                maxWidth: '500px', width: '250px',
+                                                                height: '25px', margin: '5px',
+                                                                padding: '0px'
+                                                            }}
+                                                    />
+
+                                                    <Typography
+                                                        noWrap={true}
+                                                        style={{
+                                                            position: 'absolute',
+                                                            paddingLeft: '15px',
+                                                            paddingTop: '5px',
+                                                            color: 'white'
+                                                        }}
+                                                        type="subheading"
+
+                                                    >
+                                                        {(data as any)._name}
+                                                    </Typography>
+
+                                                </div>
+                                            </div>
+                                        </Grid>
+                                    )
+                                    ) : ''}
                         </Grid>
 
-
-                    </Grid>
+                    </Paper>
                 </Grid>
 
-            </div >
+
+                {/*
+                    <Grid>
+                        
+
+                    </Grid>
+                    */
+                }
+
+
+            </Section >
         );
     }
 }

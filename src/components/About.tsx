@@ -2,12 +2,14 @@ import * as React from 'react';
 import Typography from 'material-ui/Typography/Typography';
 import { withStyles, WithStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid/Grid';
-
 import CardContent from 'material-ui/Card/CardContent';
-import './About.css';
-
 import Contact from './Contact';
 import Divider from 'material-ui/Divider/Divider';
+import Button from 'material-ui/Button/Button';
+import './About.css';
+import Section from './Section';
+import * as FontAwesome from 'react-fontawesome';
+import Paper from 'material-ui/Paper/Paper';
 
 const style = {
 
@@ -30,9 +32,7 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
 
     render () {
         return (
-            <div id="aboutLink" className="aboutBody">
-
-
+            <Section id="aboutLink" title="" background="#EFEFEF">
                 {
                     /*
                     <Grid>
@@ -45,19 +45,32 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                     </Grid>
                     */
                 }
-                <div
-                    id="whitespace"
+                <Paper
+                    elevation={5}
                     style={
                         {
                             background: '#999999',
                             height: window.innerHeight / 4 + 'px',
                             display: 'inline-block',
                             width: '100%',
-                            marginBottom: '20px',
-
-                            backgroundImage: `url(${background})`
+                            marginBottom: '50px',
                         }}
-                />
+                >
+                    <div
+                        id="whitespace"
+                        style={
+                            {
+                                background: '#999999',
+                                height: window.innerHeight / 4 + 'px',
+                                display: 'inline-block',
+                                width: '100%',
+                                marginBottom: '0px',
+                                paddingBottom: '0px',
+
+                                backgroundImage: `url(${background})`
+                            }}
+                    />
+                </Paper>
 
                 <Grid
                     container={true}
@@ -66,68 +79,89 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                     alignContent="center"
                     wrap="wrap"
                 >
+                    <Paper style={{ paddingBottom: '40px', maxWidth: '90%' }} elevation={10}  >
+                        <div
+                            style={
+                                {
+                                    display: 'flex',
+                                    maxWidth: '700px',
+                                }}
+                        >
+                            <CardContent >
+                                <div style={{ display: 'flex', flexDirection: 'row', verticalAlign: 'bottom' }} >
+                                    <Typography type="subheading" color="error" gutterBottom={true} paragraph={true} >
+                                        Like the site? Check it out on
+                                    </Typography >
 
-                    <div
-                        style={
-                            {
-                                maxWidth: '800px',
-
-
-
-
-
-
-                            }}
-
-                    >
-                        <CardContent >
-                            <Typography type="headline" color="error">
-                                Like the site? Check it out on GitHub<br />
-                                Fork it, Copy it, Destroy it. Do anything you want with it.<br />
-                                Think its really cool? Let me know!
-                            </Typography>
-                            <p />
-                            <Divider />
-                            <p />
-                            <Typography type="display2" component="h2">
-                                Hello.
-                            </Typography>
+                                    <Button
+                                        mini={true}
+                                        raised={true}
+                                        dense={true}
+                                        color="primary"
+                                        type="headline"
+                                        style={{ marginLeft: '10px' }}
+                                        onClick={(e) => window.open('http://www.github.com/jmoyse')}
+                                    >
 
 
+                                        <FontAwesome
 
+                                            name="github"
+                                            size="2x"
+                                            style={{
+                                                margin: '0px',
+                                                paddingLeft: '5px',
+                                                paddingRight: '5px',
+                                                textShadow: '1px 1px 1px rgba(0, 0, 0, 0.1)'
+                                            }}
+                                        />
 
-                            <Typography paragraph={true}>
-                                I am a Software Developer and Computer Scientist.
-                                        I graduated from the University of Maryland
+                                        github
+                                    </Button>
+                                </div>
 
+                                <Typography type="subheading" color="error">
+                                    It's written in Typescript, React and Material UI<br />
+                                    Fork it, Copy it, Destroy it. Do anything you want with it.<br />
+                                    Think its really cool? Let me know!
+                                </Typography>
+                                <p />
+                                <Divider />
+                                <p />
+                                <Typography type="display2" component="h2">
+                                    Hello.
+                                </Typography>
 
-                                {/*<a href="www.umd.edu"></a>*/}
-                                with a Bachelors in Computer Science.
-                                        I am a detail-oriented developer with an passion for writing clean,
+                                <Typography paragraph={true}>
+                                    I'm Julian. I'm a Full Stack Software Developer.
+                                        I graduated from the University of Maryland with a Bachelor's in Computer Science.
+                                        I am a detail-oriented developer with a passion for writing clean,
                                         efficent and well maintained code.
                                         I pride myself in staying up to date with the latest technology
                                         and software design principles.
                                     </Typography>
 
-                            <Typography paragraph={true}>
-                                Currently working as a freelance web developer,
+                                <Typography paragraph={true}>
+                                    Currently working as a freelance web developer,
                                         but always open to new opportunities.
-                                    </Typography>
-                            <Typography type="headline" component="h3">
-                                Lifelong geek, nerd and techie.
                             </Typography>
 
-                            <Typography component="h5">
-                                Feel free to shoot me a message
+                                <Typography type="headline" component="h3" paragraph={true}>
+                                    Lifelong geek, nerd and techie.
                             </Typography>
 
-                        </CardContent>
-                    </div>
+                                <Typography type="subheading" component="h3">
+                                    Feel free to shoot me a message
+                            </Typography>
 
+                            </CardContent>
+                        </div>
+                    </Paper>
                     <Contact />
 
                 </Grid>
-            </div >
+
+            </Section >
         );
     }
 }
