@@ -1,136 +1,148 @@
 <portfolio>
-    <intro avatar="/images/headshot.jpg" heading="Julian Moyse"  subheading="Full Stack Developer" />
-    <about>
-    I am a Software Developer and Computer Scientist. I graduated from the University of Maryland with a Bachelors in Computer Science. I am a detail-oriented developer with an passion for writing clean, efficent and well maintained code. I pride myself in staying up to date with the latest technology and software design principles.
+   <intro avatar="/images/headshot.jpg" heading="Julian Moyse"  subheading="Full Stack Developer" />
+   <about>
+   F
+   I am a Software Developer and Computer Scientist. I graduated from the University of Maryland with a Bachelors in Computer Science. I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology and software design principles.
 
-    Currently working as a freelance web developer, but always open to new opportunities.
-    Lifelong geek, nerd and techie.
-    Feel free to shoot me a message
-    </about>
+   Currently working as a freelance web developer, but always open to new opportunities.
+   Lifelong geek, nerd and techie.
+   Feel free to shoot me a message
+   </about>
 
-    <contacts>
-        <contact name="github.com/jmoyse" link="github.com/jmoyse" icon="github" />
-        <contact name="facebook.com/julianmoyse" link="facebook.com/julianmoyse" icon="facebook" />
-        <contact name="@julianmoyse" link="twitter.com/julianmoyse" icon="twitter" />
-        <contact name="Google+" link="google.com/something" icon="googleplus" />
-        <contact name="linkedin.com/in/julianmoyse" link="linkedin.com/in/julianmoyse" icon="linkedin" />
-        <contact name="hello@julianmoyse.com" link="mailto:hello@julianmoyse.com" icon="email" />
-    </contacts>
+   <contacts>
+       <contact name="github.com/jmoyse" link="github.com/jmoyse" icon="github" />
+       <contact name="facebook.com/julianmoyse" link="facebook.com/julianmoyse" icon="facebook" />
+       <contact name="@julianmoyse" link="twitter.com/julianmoyse" icon="twitter" />
+       <contact name="Google+" link="google.com/something" icon="googleplus" />
+       <contact name="linkedin.com/in/julianmoyse" link="linkedin.com/in/julianmoyse" icon="linkedin" />
+       <contact name="hello@julianmoyse.com" link="mailto:hello@julianmoyse.com" icon="email" />
+   </contacts>
 
-    <projects>
-        <project name="Word Coaster" url="http://wordcoaster.julianmoyse.com" screenshot="wordcoaster.png"  github="">
-            <description>
-                Mobile and Native Web multi-player word game. A modern and new twist on classic board games like Scrabble and Boggle. Supports hundreds of concurrent players with chat, score history and profiles. Cleanly written using a number of different modern languages and APIs. Broken up in a number of smaller projects.
-            </description>
-        <techs>
-            <tech name="Typescript" icon="typescript" />
-            <tech name="Javascript" icon="typescript" />
-            <tech name="React" icon="typescript" />
-            <tech name="Redux" icon="typescript" />
-            <tech name="Webpack" icon="typescript" />
-            <tech name="HTML 5" icon="typescript" />
-            <tech name="Material UI" icon="typescript" />
-        </techs>
-        </project>
+   <projects>
+       <project name="Word Coaster" url="https://wordcoaster.julianmoyse.com/play/" screenshot="wordcoaster1.gif"  github="">
+           <description>
+               Mobile real time multiplayer game. A twist on classic board games like Scrabble and Boggle. Games are played in real-time vs the entire lobby. The winner is the player who can score the most points in the lobby before the 2 minute timer is up.  Support for hundreds of concurrent players with chat, score history and profiles. Cleanly written using a number of different modern languages and APIs. Broken up in a number of smaller projects.  Selected source code available upon request.
+           </description>
+       <techs>
+           <tech name="Typescript" icon="typescript" />
+           <tech name="Javascript" icon="typescript" />
+           <tech name="React" icon="typescript" />
+           <tech name="Redux" icon="typescript" />
+           <tech name="Webpack" icon="typescript" />
+           <tech name="Docker" icon="typescript" />
+           <tech name="Material UI" icon="typescript" />
+       </techs>
+       </project>
 
-        <project name="2048" url="" screenshot="2048.png" github="https://www.github.com/something">
-            <description>
-                .NET version of the 2048 tile game
-            </description>
-             <techs>
-            <tech name="C#" icon="csharp" />
-            <tech name=".NET Runtime" icon="dotnet" />
-             </techs>
-        </project>
-
-        <project name="Loose Quad-Tree Data Structure" url="" screenshot="showquad.png" github="https://www.github.com/something">
-            <description>
-                Implemention of the the Quadtree Data Structure.
-                C++ implementation of the Data Structure used for efficent querying of 2-D objects. Supports efficent range queries and storage. Written for CMSC420 (Data Structures).
-            </description>
+       <project name="2048" url="" screenshot="2048.png" github="https://github.com/jmoyse/2048-csharp">
+           <description>
+               .NET version of the 2048 tile game
+           </description>
             <techs>
-                <tech name="C++" icon="cplusplus" />
-                <tech name="Linux" icon="Linux" />
+           <tech name="C#" icon="csharp" />
+           <tech name=".NET Runtime" icon="dotnet" />
             </techs>
-        </project>
+       </project>
 
+       <project name="Loose Quadtree Data Structure" url="" screenshot="showquad.png" github="https://github.com/jmoyse/loosequadtree">
+           <description>
+               Implementation of the the Quadtree Data Structure.
+               C++ implementation of the Data Structure used for efficient querying of 2-D objects. Supports efficient range queries and storage. Written for CMSC420 (Data Structures).
+           </description>
+           <techs>
+               <tech name="C++" icon="cplusplus" />
+               <tech name="Linux" icon="linux" />
+           </techs>
+       </project>
 
-        <project name="Word Coaster Server Back-end" url="" screenshot="gameserver1.png" github="">>
-            <description>
-               Running multi-threaded WebSocket backend. Accounts and game history stored in a SQlite database. Dockerized for scaleability. Deployable to Linux, Windows or MacOSX.
-            </description>
-            <techs>
-                <tech name=".NET Core" icon="netcore" />
-                <tech name="C#" icon="csharp" />
-                <tech name="WebSockets" icon="WebSockets" />
-                <tech name="Docker" icon="Docker" />
-                <tech name="SQLite" icon="SQLite" />
-            </techs>
-        </project>
+       <project name="Word Coaster Server Back-end" url="https://julianmoyse.com:3000/solver?tiles=RILLEPVPIEUOOONU" screenshot="gameserver1.png" github="https://github.com/jmoyse/boggle-solver-microservice">
+           <description>
+              Micro-service that efficiently solves a board of any given size using a Trie and depth-first traversal of the gameboard. Returns results in JSON.
+           </description>
+           <techs>
+               <tech name="Node.js" icon="cplusplus" />
+               <tech name="Express" icon="csharp" />
+               <tech name="Typescript" icon="csharp" />
+               <tech name="JSON" icon="WebSockets" />
+               <tech name="Docker" icon="Docker" />
+           </techs>
+       </project>
 
-        <project name="Game Solution Solver" url="https://julianmoyse.com:3000/solver?tiles=RILLEPVPIEUOOONU" screenshot="solver2.png" github="https://www.github.com/something">
-            <description>
-               Microservice that efficently solves a board of any given size using a Trie and depth-first traversal of the gameboard. Returns results in JSON.
-            </description>
-            <techs>
-                <tech name="Node.js" icon="cplusplus" />
-                <tech name="Express" icon="csharp" />
-                <tech name="Typescript" icon="csharp" />
-                <tech name="JSON" icon="WebSockets" />
-                <tech name="Docker" icon="Docker" />
-            </techs>
-        </project>
+       <project name="Bittorrent Client" url="" screenshot="btclient.png" github="https://github.com/jmoyse/btclient-ruby">>
+           <description>
+              Bittorrent client written in ruby
+           </description>
+           <techs>
+               <tech name="Ruby" icon="ruby" />
+               <tech name="Sockets" icon="sockets" />
+           </techs>
+       </project>
 
-        <project name="XMMS Mp3 Player Clone" url="" screenshot="mp3player-screenshot.png" github="https://www.github.com/something">
-            <description>
-            Music player application written to match the basic look and feel of standard three-panel MP3 player applications. Functionality similar to XMMS, Foobar200 and WinAmp. The application is designed to be lightweight with a small memory. 
+       <project name="Boggle Solver Microservice" url="https://julianmoyse.com:3000/solver?tiles=RILLEPVPIEUOOONU" screenshot="solver2.png" github="https://github.com/jmoyse/boggle-solver-microservice">
+           <description>
+              Microservice that efficiently solves a board of any given size using a Trie and depth-first traversal of the gameboard. Returns results in JSON.
+           </description>
+           <techs>
+               <tech name="Node.js" icon="cplusplus" />
+               <tech name="Express" icon="csharp" />
+               <tech name="Typescript" icon="csharp" />
+               <tech name="JSON" icon="WebSockets" />
+               <tech name="Docker" icon="Docker" />
+           </techs>
+       </project>
 
-            Written in Mono and C#, allowing the application to run on variety of different systems provided the system has access to GTK, GTK-Sharp and LibGstreamer. Supports adding songs from local folders, creating playlists and standard playing functions.
+       <project name="XMMS-like MP3 Player" url="" screenshot="mp3player-screenshot.png" github="https://github.com/jmoyse/mono-mp3player">
+           <description>
+           Music player application written to match the basic look and feel of standard three-panel MP3 player applications. Functionality similar to XMMS, Foobar200 and WinAmp. The application is designed to be lightweight with a small memory.
 
-            Runs of Linux, Unix, MacOSX and Windows
+           Written in Mono and C#, allowing the application to run on variety of different systems provided the system has access to GTK, GTK-Sharp and LibGstreamer. Supports adding songs from local folders, creating playlists and standard playing functions.
 
-            </description>
-            <techs>
-                <tech name="Mono" icon="" />
-                <tech name="C#" icon="" />
-                <tech name="GTK" icon="" />
-                <tech name="Lib G-Streamer" icon="" />
-                <tech name="Linux" icon="" />>
-            </techs>
-        </project>
+           Runs of Linux, Unix, Mac OSX and Windows
 
-        <project name="Tablet Touch Keyboard" url="" screenshot="keyboard-small.png" github="https://www.github.com/something">
-            <description>
-               Small, touch enabled on screen keyboard for tablets. Requires Mono,
-            </description>
-            <techs>
-                <tech name="Mono" icon="" />
-                <tech name="C#" icon="" />
-                <tech name="GTK" icon="" />
-                <tech name="Linux" icon="" />>
-            </techs>
-        </project>
-    </projects>
+           </description>
+           <techs>
+               <tech name="Mono" icon="" />
+               <tech name="C#" icon="" />
+               <tech name="GTK" icon="" />
+               <tech name="Lib G-Streamer" icon="" />
+               <tech name="Linux" icon="" />>
+           </techs>
+       </project>
 
-    <education>
-        <school name="Univerity of Maryland" degree="Computer Science, Bachelors" location="College Park, MD" />
-        <school name="Howard Community College" degree="Mathematics, Associates" location="Columbia, MD" />
-        <school name="Howard Community College" degree="Computer Science, Associates" location="Columbia, MD" />
-    </education>
+       <project name="Tablet Touch Keyboard" url="" screenshot="keyboard-small.png" github="">
+           <description>
+              Small, touch enabled on screen keyboard for tablets. Requires Mono,
+           </description>
+           <techs>
+               <tech name="Mono" icon="" />
+               <tech name="C#" icon="" />
+               <tech name="GTK" icon="" />
+               <tech name="Linux" icon="" />>
+           </techs>
+       </project>
+   </projects>
 
-    <skills>
-        <skill name="C#/.NET" icon="dotnet.png" score="90" />
-        <skill name="Java" icon="java.png" score="60" />
-        <skill name="C++" icon="cplusplus.png" score="60" />
-        <skill name="Javascript" icon="javascript.png" score="90" />
-        <skill name="Typescript" icon="typescript.png" score="90" />
-        <skill name="React" icon="react.png" score="80" />
-        <skill name="Redux" icon="redux.png" score="80" />
-        <skill name="Node.JS" icon="nodejs.png" score="90" />
-        <skill name="Python" icon="python.png" score="65" />
-        <skill name="PostreSQL" icon="postgres.png" score="92" />
-        <skill name="MongoDB" icon="mongodb.png" score="80" />
-        <skill name="MySQL" icon="mysql.png" score="85" />
-    </skills>
+   <education>
+       <school name="University of Maryland" degree="BS. Computer Science" location="College Park, MD" />
+       <school name="Howard Community College" degree="AS. Mathematics" location="Columbia, MD" />
+       <school name="Howard Community College" degree="AS. Computer Science" location="Columbia, MD" />
+   </education>
+
+   <skills>
+       <skill name="C#/.NET" icon="dotnet.png" score="90" />
+       <skill name="Java" icon="java.png" score="60" />
+       <skill name="C++" icon="cplusplus.png" score="60" />
+       <skill name="Javascript" icon="javascript.png" score="90" />
+       <skill name="Typescript" icon="typescript.png" score="90" />
+       <skill name="React" icon="react.png" score="80" />
+       <skill name="Redux" icon="redux.png" score="80" />
+       <skill name="Node.JS" icon="nodejs.png" score="90" />
+       <skill name="Python" icon="python.png" score="65" />
+       <skill name="PostreSQL" icon="postgres.png" score="92" />
+       <skill name="MongoDB" icon="mongodb.png" score="80" />
+       <skill name="MySQL" icon="mysql.png" score="85" />
+   </skills>
 
 </portfolio>
+
+

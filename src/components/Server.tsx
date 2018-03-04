@@ -41,7 +41,7 @@ class ServerComponent extends React.Component<ServerProps & WithStyles<ClassName
 
 
                         <div className="projectsContainer">
-                            <Typography type="title" gutterBottom={true}>
+                            <Typography variant="title" gutterBottom={true}>
                                 Hosted on a Virtual Private Server courtesy of
                                 <Button href="www.vultr.com">Vultr.com</Button><br />
                                 Source hosted on Github and locally. SSL from LetsEncrypt<br />
@@ -78,7 +78,6 @@ class ServerComponent extends React.Component<ServerProps & WithStyles<ClassName
                             </div>
                             <div>
                                 <Button href="https://hub.docker.com/_/node/">docker/nodejs</Button>
-
                             </div>
                             <div>
                                 <Button href="https://github.com/dotnet/dotnet-docker">docker/dotnet</Button>
@@ -86,7 +85,7 @@ class ServerComponent extends React.Component<ServerProps & WithStyles<ClassName
                             <div>
                                 <Button href="https://hub.docker.com/r/linuxserver/letsencrypt/">docker/letsencrypt</Button>
                             </div>
-                        </div >
+                        </div>
 
                     </Paper>
 

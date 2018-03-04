@@ -68,10 +68,8 @@ class IntroComponent extends React.Component<IntroProps & WithStyles<ClassNames>
                     }
                 }
             >
-
                 <Grid
                     container={true}
-
                     style={{
                         'height': this.state.height, display: 'inline-block', alignSelf: 'center',
                         margin: '0px',
@@ -90,19 +88,21 @@ class IntroComponent extends React.Component<IntroProps & WithStyles<ClassNames>
                     >
                         <Avatar
                             src={headshot}
+                            alt="headshot"
                             className={classNames(this.props.classes.avatar)}
                         />
-                        <Typography type="display3" >
+                        <Typography variant="display3" >
                             Julian Moyse
                                 </Typography>
 
-                        <Typography type="headline" >
+                        <Typography variant="headline" >
                             Full Stack Developer
                         </Typography>
                     </Grid>
 
                     <Button
-                        fab={true}
+                        
+                        variant="fab"
                         color="primary"
                         aria-label="add"
                         onClick={(evt) => this.props.onArrowMouseDown(this, evt)}

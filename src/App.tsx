@@ -165,7 +165,7 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
                 <Toolbar >
                   {
                     /*
-                    <IconButton color="contrast" aria-label="Menu">
+                    <IconButton color="primary" aria-label="Menu">
                       <MenuIcon />
                     </IconButton>
                     */
@@ -179,19 +179,20 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
 
                   >
 
-                    <Button dense={true} color="contrast" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
+
+                    <Button type="dense" color="primary" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
                       About
                     </Button>
-                    <Button dense={true} color="contrast" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
+                    <Button type="dense" color="primary" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
                       Contact
                     </Button>
-                    <Button dense={true} color="contrast" onClick={() => this.scrollTo('skillsSection', 'easeOutQuad', false)}>
+                    <Button type="dense" color="primary" onClick={() => this.scrollTo('skillsSection', 'easeOutQuad', false)}>
                       Skills
                     </Button>
-                    <Button dense={true} color="contrast" onClick={() => this.scrollTo('projectsSection', 'easeOutQuad', false)}>
+                    <Button type="dense" color="primary" onClick={() => this.scrollTo('projectsSection', 'easeOutQuad', false)}>
                       Projects
                     </Button>
-                    <Button dense={true} color="contrast" onClick={() => this.scrollTo('educationSection', 'easeOutQuad', false)}>
+                    <Button type="dense" color="primary" onClick={() => this.scrollTo('educationSection', 'easeOutQuad', false)}>
                       Education
                     </Button>
 

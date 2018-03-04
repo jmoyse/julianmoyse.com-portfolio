@@ -4,12 +4,13 @@ import { withStyles, WithStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid/Grid';
 import CardContent from 'material-ui/Card/CardContent';
 import Contact from './Contact';
-import Divider from 'material-ui/Divider/Divider';
 import Button from 'material-ui/Button/Button';
 import './About.css';
 import Section from './Section';
 import * as FontAwesome from 'react-fontawesome';
 import Paper from 'material-ui/Paper/Paper';
+
+import { } from 'material-ui/styles';
 
 const style = {
 
@@ -79,7 +80,7 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                     alignContent="center"
                     wrap="wrap"
                 >
-                    <Paper style={{ paddingBottom: '40px', maxWidth: '90%' }} elevation={10}  >
+                    <Paper style={{ paddingLeft: '10px', paddingBottom: '40px', maxWidth: '90%', paddingTop: '0px' }} elevation={10}  >
                         <div
                             style={
                                 {
@@ -87,72 +88,93 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                                     maxWidth: '700px',
                                 }}
                         >
-                            <CardContent >
-                                <div style={{ display: 'flex', flexDirection: 'row', verticalAlign: 'bottom' }} >
-                                    <Typography type="subheading" color="error" gutterBottom={true} paragraph={true} >
-                                        Like the site? Check it out on
-                                    </Typography >
+                            <CardContent style={{ paddingTop: '0px' }}>
+                                <Grid
+                                    container={true}
+                                    direction="row"
+                                    alignItems="flex-start"
+                                    alignContent="space-between"
+                                    justify="space-between"
+                                    style={{ marginTop: '0px', paddingTop: '0px', paddingBottom: '20px' }}
+                                >
+                                    <Grid item={true} alignItems="flex-start" alignContent="flex-start" >
+                                        <Typography variant="display3" >
+                                            Hello.
+                                       </Typography>
+                                    </Grid>
 
-                                    <Button
-                                        mini={true}
-                                        raised={true}
-                                        dense={true}
-                                        color="primary"
-                                        type="headline"
-                                        style={{ marginLeft: '10px' }}
-                                        onClick={(e) => window.open('http://www.github.com/jmoyse')}
-                                    >
+                                    <Grid item={true} alignItems="flex-end" style={{ marginTop: '0px', paddingTop: '0px' }}>
+
+                                        <Grid container={true} direction="row" alignItems="flex-end" style={{ margin: '0px' }}>
+                                            <Typography variant="subheading" color="error" style={{ paddingBottom: '0px' }} >
+                                                Like the site? Check it out on
+                                                </Typography >
+                                            <Button
+                                                mini={true}
+                                                variant="raised"
+                                                type="dense"
+                                                color="primary"
+                                                //type="headline"
+                                                style={{ marginLeft: '10px', margin: '5px' }}
+
+                                                onClick={
+                                                    (e) => window.open('https://github.com/jmoyse/julianmoyse.com-portfolio')
+                                                }
+                                            >
 
 
-                                        <FontAwesome
+                                                <FontAwesome
+                                                    name="github"
+                                                    size="2x"
+                                                    style={{
+                                                        margin: '0px',
+                                                        paddingLeft: '5px',
+                                                        paddingRight: '5px',
+                                                        textShadow: '1px 1px 1px rgba(0, 0, 0, 0.1)'
+                                                    }}
+                                                />
+                                                github
+                                           </Button>
 
-                                            name="github"
-                                            size="2x"
-                                            style={{
-                                                margin: '0px',
-                                                paddingLeft: '5px',
-                                                paddingRight: '5px',
-                                                textShadow: '1px 1px 1px rgba(0, 0, 0, 0.1)'
-                                            }}
-                                        />
+                                        </Grid>
+                                        {}
+                                        <Paper>
+                                            <Typography variant="subheading" color="error">
+                                                Created using Typescript, React and Material UI<br />
+                                                Fork it, Copy it, Destroy it. Do anything you want with it.<br />
+                                                Think its really cool? Let me know!
+                                            </Typography>
+                                       </Paper>
+                                    </Grid>
 
-                                        github
-                                    </Button>
-                                </div>
-
-                                <Typography type="subheading" color="error">
-                                    It's written in Typescript, React and Material UI<br />
-                                    Fork it, Copy it, Destroy it. Do anything you want with it.<br />
-                                    Think its really cool? Let me know!
-                                </Typography>
-                                <p />
-                                <Divider />
-                                <p />
-                                <Typography type="display2" component="h2">
-                                    Hello.
-                                </Typography>
+                                </Grid>variant
 
                                 <Typography paragraph={true}>
-                                    I'm Julian. I'm a Full Stack Software Developer.
-                                        I graduated from the University of Maryland with a Bachelor's in Computer Science.
-                                        I am a detail-oriented developer with a passion for writing clean,
-                                        efficent and well maintained code.
-                                        I pride myself in staying up to date with the latest technology
-                                        and software design principles.
-                                    </Typography>
+                                    I'm a full stack software developer based out of Columbia, Maryland. I create full featured, user-focused applications on the web.
+                                    I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology
+                                    and software design principles.
+                                   <br />
+                                    <p />
+                                    Interested in all facets of computers, the internet and technology.
+
+
+
+                                   <br />
+
+                                </Typography>
 
                                 <Typography paragraph={true}>
                                     Currently working as a freelance web developer,
                                         but always open to new opportunities.
-                            </Typography>
+                           </Typography>
 
-                                <Typography type="headline" component="h3" paragraph={true}>
-                                    Lifelong geek, nerd and techie.
-                            </Typography>
+                                <Typography variant="headline" component="h3" paragraph={true}>
+                                    Lifelong nerd, hacker and techno-geek.
+                           </Typography>
 
-                                <Typography type="subheading" component="h3">
-                                    Feel free to shoot me a message
-                            </Typography>
+                                <Typography variant="subheading" component="h3">
+                                    Feel free to send me a message!
+                           </Typography>
 
                             </CardContent>
                         </div>
@@ -168,3 +190,5 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
 
 const About = withStyles(style)<AboutProps>(AboutComponent);
 export default About;
+
+

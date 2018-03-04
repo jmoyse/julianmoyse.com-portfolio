@@ -50,15 +50,15 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
                                 </ListItemIcon>
 
                                 <Grid>
-                                    <Typography type="title" >
+                                    <Typography variant="title" >
                                         Computer Science - Bachelors of Science
-                                                        </Typography>
-                                    <Typography type="subheading" style={{ paddingBottom: '0px' }}>
+                                    </Typography>
+                                    <Typography variant="subheading" style={{ paddingBottom: '0px' }}>
                                         University of Maryland
-                                                        </Typography>
-                                    <Typography type="body2" style={{ paddingBottom: '0px' }}>
+                                    </Typography>
+                                    <Typography variant="body2" style={{ paddingBottom: '0px' }}>
                                         College Park, MD
-                                                        </Typography>
+                                    </Typography>
                                 </Grid>
                             </ListItem>
                             <Divider />
@@ -69,13 +69,13 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
                                 </ListItemIcon>
 
                                 <Grid >
-                                    <Typography type="title">
+                                    <Typography variant="title">
                                         Mathematics - Associates of Arts
                                                         </Typography>
-                                    <Typography type="subheading" style={{ paddingBottom: '0px' }}>
+                                    <Typography variant="subheading" style={{ paddingBottom: '0px' }}>
                                         Howard Community College
                                                         </Typography>
-                                    <Typography type="body2" style={{ paddingBottom: '0px' }}>
+                                    <Typography variant="body2" style={{ paddingBottom: '0px' }}>
                                         Columbia, MD
                                     </Typography>
                                 </Grid>
@@ -88,13 +88,13 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
                                 </ListItemIcon>
 
                                 <Grid>
-                                    <Typography type="title" >
+                                    <Typography variant="title" >
                                         Computer Science - Associates of Arts
-                                                        </Typography>
-                                    <Typography type="subheading" style={{ paddingBottom: '0px' }}>
+                                    </Typography>
+                                    <Typography variant="subheading" style={{ paddingBottom: '0px' }}>
                                         Howard Community College
                                     </Typography>
-                                    <Typography type="body2" style={{ paddingBottom: '0px' }}>
+                                    <Typography variant="body2" style={{ paddingBottom: '0px' }}>
                                         Columbia, MD
                                     </Typography>
                                 </Grid>

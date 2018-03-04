@@ -60,7 +60,7 @@ class SectionComponent extends React.Component<SectionProps & WithStyles<ClassNa
                         this.props.title.length > 0 ? (
                             <Grid container={true} alignItems="center" alignContent="center" justify="center">
                                 <Typography
-                                    type="display2"
+                                    variant="display2"
                                     align="center"
                                     color="secondary"
                                     style={{ paddingBottom: '30px', display: 'block', fontVariant: 'caps' }}

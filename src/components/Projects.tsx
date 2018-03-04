@@ -46,7 +46,6 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
 
     constructor (props: ProjectsProps & WithStyles<ClassNames>) {
         super(props);
-        //console.log(props.projects);
         this.state = {
             selectedSliderIndex: 0,
         };
@@ -81,9 +80,19 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                         direction="row"
                         justify="center"
                     >
-                        <Paper elevation={15} style={{ padding: '20px', display: 'block', minWidth: '0px', maxWidth: '90%' }}   >
+                        <Paper
+                            elevation={15}
+                            style={
+                                {
+                                    padding: '20px',
+                                    display: 'block',
+                                    minWidth: '0px',
+                                    maxWidth: '90%'
+                                }
+                            }
+                        >
                             <MobileStepper
-                                type="dots"
+                                variant="dots"
                                 steps={((this.props.projects as any).project as any).length}
                                 position="static"
                                 activeStep={
@@ -91,23 +100,47 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                                 }
 
                                 nextButton={
-                                    < Button dense={true} onClick={(e) => (this.slider as Slider).slickNext()} >
+                                    <Button type="dense" onClick={(e) => (this.slider as Slider).slickNext()} >
                                         Next
                                     </Button>}
 
                                 backButton={
-                                    <Button dense={true} onClick={() => (this.slider as Slider).slickPrev()} >
+                                    <Button type="dense" onClick={() => (this.slider as Slider).slickPrev()} >
                                         Back
                                     </Button>}
                             />
                             <Slider ref={c => (this.slider = c)} {...settings} className="slider" >
                                 {((this.props.projects as any).project as Array<Object>).map(data =>
                                     <div className="singleProjectDiv" key={(data as any)._name}>
-                                        <Grid style={{ height: '100%', width: '100%', paddingBottom: '20px' }}>
+                                        <Grid
+                                            direction="column"
+                                            justify="center"
+                                            alignContent="center"
+                                            style={{ paddingBottom: '20px' }}
+                                        >
                                             {/* project title*/}
-                                            <Typography type="headline" paragraph={true}>
-                                                {(data as any)._name}
-                                            </Typography>
+
+                                            {
+
+
+                                                <Button
+                                                    style={{ margin: '5px' }}
+                                                    color="primary"
+                                                    onClick={
+                                                        (data as any)._url !== '' ? (e) => window.open((data as any)._url) : (e) => (undefined)
+                                                    }
+                                                    disableFocusRipple={(data as any)._url === ''}
+                                                    disableRipple={(data as any)._url === ''}
+                                                    size="medium"
+                                                >
+                                                    {(data as any)._name}
+                                                </Button>
+
+
+                                            }
+
+
+                                            <br />
 
                                             {/* project screenshot*/}
                                             <img
@@ -133,7 +166,7 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                                             <div style={{ 'verticalAlign: top;': 'bottom' }}>
                                                 {(((data as any).techs.tech) as Array<Object>).map(chip =>
                                                     <Chip
-                                                        key={(chip as any)._name}
+                                                        key={(chip as any)._name + (data as any)._name}
                                                         label={(chip as any)._name}
                                                         style={{ fontWeight: 'bold' }}
                                                         avatar={<DoneIcon />}
@@ -148,7 +181,7 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                                                         (
                                                             <Button
                                                                 style={{ margin: '5px' }}
-                                                                raised={true}
+                                                                variant="raised"
                                                                 color="primary"
                                                                 onClick={
                                                                     (e) => window.open((data as any)._url)
@@ -165,7 +198,7 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                                                         (
                                                             <Button
                                                                 style={{ margin: '5px' }}
-                                                                raised={true}
+                                                                variant="raised"
                                                                 color="primary"
                                                                 onClick={
                                                                     (e) => window.open((data as any)._github)
