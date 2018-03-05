@@ -24,6 +24,7 @@ export interface EducationState {
 type ClassNames = keyof typeof style;
 const hcc = require('../img/hcc.png');
 const umd = require('../img/umd.png');
+
 class EducationComponent extends React.Component<EducationProps & WithStyles<ClassNames>, EducationState> {
     constructor (props: EducationProps & WithStyles<ClassNames>) {
         super(props);
@@ -32,8 +33,6 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
     render () {
         return (
             <Section id="educationLink" title="Education" background="white">
-
-
                 <Grid
                     container={true}
                     alignItems="center"
@@ -59,6 +58,14 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
                                     <Typography variant="body2" style={{ paddingBottom: '0px' }}>
                                         College Park, MD
                                     </Typography>
+                                    <Typography variant="body2" style={{ paddingBottom: '0px', paddingLeft: '20px' }}>
+                                        ▪ Design and Analysis of Computer Algorithms<br />
+                                        ▪ Database Design, Computer Networks<br />
+                                        ▪ Computer Networks<br />
+                                        ▪ System Architecture<br />
+                                        ▪ Human-Computer Interaction<br />
+                                        ▪ Data Structures<br />
+                                    </Typography>
                                 </Grid>
                             </ListItem>
                             <Divider />
@@ -71,10 +78,10 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
                                 <Grid >
                                     <Typography variant="title">
                                         Mathematics - Associates of Arts
-                                                        </Typography>
+                                    </Typography>
                                     <Typography variant="subheading" style={{ paddingBottom: '0px' }}>
                                         Howard Community College
-                                                        </Typography>
+                                    </Typography>
                                     <Typography variant="body2" style={{ paddingBottom: '0px' }}>
                                         Columbia, MD
                                     </Typography>

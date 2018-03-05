@@ -71,6 +71,7 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                                 backgroundImage: `url(${background})`
                             }}
                     />
+
                 </Paper>
 
                 <Grid
@@ -80,7 +81,7 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                     alignContent="center"
                     wrap="wrap"
                 >
-                    <Paper style={{ paddingLeft: '10px', paddingBottom: '40px', maxWidth: '90%', paddingTop: '0px' }} elevation={10}  >
+                    <Paper style={{ paddingLeft: '10px', paddingRight: '0px', marginRight: '0px', paddingBottom: '40px', maxWidth: '90%', paddingTop: '0px' }} elevation={10}  >
                         <div
                             style={
                                 {
@@ -88,34 +89,23 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                                     maxWidth: '700px',
                                 }}
                         >
-                            <CardContent style={{ paddingTop: '0px' }}>
-                                <Grid
-                                    container={true}
-                                    direction="row"
-                                    alignItems="flex-start"
-                                    alignContent="space-between"
-                                    justify="space-between"
-                                    style={{ marginTop: '0px', paddingTop: '0px', paddingBottom: '20px' }}
-                                >
-                                    <Grid item={true} alignItems="flex-start" alignContent="flex-start" >
-                                        <Typography variant="display3" >
-                                            Hello.
-                                       </Typography>
-                                    </Grid>
-
-                                    <Grid item={true} alignItems="flex-end" style={{ marginTop: '0px', paddingTop: '0px' }}>
-
+                            <CardContent style={{ paddingTop: '0px', paddingRight: '0px', marginRight: '10px', }}>
+                                <Paper elevation={10} style={{ padding: '5px', margin: '10px', position: 'static', maxWidth: '400px', float: 'right' }}>
+                                    <Grid item={true} alignItems="flex-end" style={{ marginTop: '0px', paddingTop: '0px', paddingLeft: '5px', paddingRight: '5px' }}>
                                         <Grid container={true} direction="row" alignItems="flex-end" style={{ margin: '0px' }}>
-                                            <Typography variant="subheading" color="error" style={{ paddingBottom: '0px' }} >
+                                            <Typography variant="subheading" color="primary" style={{ paddingBottom: '0px' }} >
                                                 Like the site? Check it out on
-                                                </Typography >
+                                            </Typography >
+
                                             <Button
-                                                mini={true}
+
                                                 variant="raised"
                                                 type="dense"
+                                                size="small"
+
                                                 color="primary"
                                                 //type="headline"
-                                                style={{ marginLeft: '10px', margin: '5px' }}
+                                                style={{ marginLeft: '10px', marginTop: '0px' }}
 
                                                 onClick={
                                                     (e) => window.open('https://github.com/jmoyse/julianmoyse.com-portfolio')
@@ -134,47 +124,44 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                                                     }}
                                                 />
                                                 github
-                                           </Button>
+                                             </Button>
 
                                         </Grid>
+
                                         {}
-                                        <Paper>
-                                            <Typography variant="subheading" color="error">
-                                                Created using Typescript, React and Material UI<br />
-                                                Fork it, Copy it, Destroy it. Do anything you want with it.<br />
-                                                Think its really cool? Let me know!
-                                            </Typography>
-                                       </Paper>
+
+                                        <Typography variant="subheading" color="primary">
+                                            Fork it, Copy it, Destroy it. <br />
+                                            Made with <b>Typescript</b>, <b>React</b> and <b>Material UI</b><br />
+                                            Think its really cool? Let me know! &nbsp;&nbsp;👍🏽
+                                        </Typography>
+
                                     </Grid>
-
-                                </Grid>variant
-
-                                <Typography paragraph={true}>
-                                    I'm a full stack software developer based out of Columbia, Maryland. I create full featured, user-focused applications on the web.
+                                </Paper>
+                                <Typography variant="display3" paragraph={true} gutterBottom={true} style={{ paddingTop: '50px' }} >
+                                    Hello.
+                                </Typography>
+                                <Typography paragraph={true} style={{ paddingRight: '20px' }}>
+                                    My name is <b>Julian Moyse</b> I'm a Full Stack Software Developer based out of <b>Washington DC</b> area. I create full featured, user-focused applications on the web.
                                     I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology
                                     and software design principles.
                                    <br />
-                                    <p />
+                                   <p />
                                     Interested in all facets of computers, the internet and technology.
-
-
-
                                    <br />
-
                                 </Typography>
 
                                 <Typography paragraph={true}>
-                                    Currently working as a freelance web developer,
-                                        but always open to new opportunities.
-                           </Typography>
+                                    Currently working as a freelance web developer, but always open to new opportunities.
+                                </Typography>
 
                                 <Typography variant="headline" component="h3" paragraph={true}>
                                     Lifelong nerd, hacker and techno-geek.
-                           </Typography>
+                                </Typography>
 
                                 <Typography variant="subheading" component="h3">
                                     Feel free to send me a message!
-                           </Typography>
+                                </Typography>
 
                             </CardContent>
                         </div>

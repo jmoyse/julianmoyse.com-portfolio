@@ -10,6 +10,11 @@ import Slider from 'react-slick';
 import DoneIcon from 'material-ui-icons/Done';
 import './Projects.css';
 import Section from './Section';
+//import AppBar from 'material-ui/AppBar/AppBar';
+//import Toolbar from 'material-ui/Toolbar/Toolbar';
+import KeyboardArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
+import KeyboardArrowRight from 'material-ui-icons/KeyboardArrowRight';
+
 
 const style = {
 
@@ -84,34 +89,56 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
                             elevation={15}
                             style={
                                 {
-                                    padding: '20px',
+                                    //padding: '20px',
+                                    padding: '0px',
                                     display: 'block',
                                     minWidth: '0px',
                                     maxWidth: '90%'
                                 }
                             }
                         >
-                            <MobileStepper
-                                variant="dots"
-                                steps={((this.props.projects as any).project as any).length}
-                                position="static"
-                                activeStep={
-                                    this.state.selectedSliderIndex
-                                }
+                            {
+                                //                           <AppBar position="static" color="secondary">
+                                //                             <Toolbar style={{ width: '100%' }}>
+                            }
+                            <div style={{ background: '#D7DCE0' }}>
+                                <MobileStepper
+                                    variant="dots"
+                                    steps={((this.props.projects as any).project as any).length}
+                                    position="static"
+                                    activeStep={
+                                        this.state.selectedSliderIndex
+                                    }
+                                    style={{ width: '100%', background: '#D7DCE0' }}
 
-                                nextButton={
-                                    <Button type="dense" onClick={(e) => (this.slider as Slider).slickNext()} >
-                                        Next
-                                    </Button>}
 
-                                backButton={
-                                    <Button type="dense" onClick={() => (this.slider as Slider).slickPrev()} >
-                                        Back
-                                    </Button>}
-                            />
+                                    nextButton={
+                                        <Button
+                                            size="small"
+                                            onClick={(e) => (this.slider as Slider).slickNext()}
+                                            disabled={this.state.selectedSliderIndex === ((this.props.projects as any).project as Array<Object>).length - 1}
+
+                                        >
+                                            Next
+                                            <KeyboardArrowRight />
+                                        </Button>
+                                    }
+
+                                    backButton={
+                                        <Button type="small" onClick={() => (this.slider as Slider).slickPrev()} disabled={this.state.selectedSliderIndex === 0}>
+                                            Back
+                                            <KeyboardArrowLeft />
+                                        </Button>
+                                    }
+                                />
+                            </div>
+                            {
+                                //</Toolbar>
+                                //</AppBar>
+                            }
                             <Slider ref={c => (this.slider = c)} {...settings} className="slider" >
                                 {((this.props.projects as any).project as Array<Object>).map(data =>
-                                    <div className="singleProjectDiv" key={(data as any)._name}>
+                                    <div className="singleProjectDiv" key={(data as any)._name} style={{ paddingTop: '20px', paddingLeft: '40px', paddingRight: '40px' }}>
                                         <Grid
                                             direction="column"
                                             justify="center"
@@ -124,14 +151,14 @@ class ProjectsComponent extends React.Component<ProjectsProps & WithStyles<Class
 
 
                                                 <Button
-                                                    style={{ margin: '5px' }}
-                                                    color="primary"
+                                                    style={{ margin: '5px', fontSize: '225.5%', padding: '0px' }}
+                                                    color="secondary"
                                                     onClick={
                                                         (data as any)._url !== '' ? (e) => window.open((data as any)._url) : (e) => (undefined)
                                                     }
                                                     disableFocusRipple={(data as any)._url === ''}
                                                     disableRipple={(data as any)._url === ''}
-                                                    size="medium"
+                                                    size="large"
                                                 >
                                                     {(data as any)._name}
                                                 </Button>

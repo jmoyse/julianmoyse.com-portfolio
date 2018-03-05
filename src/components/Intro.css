@@ -1,0 +1,81 @@
+.arrowAnimation{
+    -webkit-animation: arrow 1.0s infinite ease-in alternate;
+    animation: arrow 1.0s infinite ease-in alternate;
+    opacity: 1;
+}
+
+@-webkit-keyframes fadeInRegular {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeInRegular {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1; } }
+
+@-webkit-keyframes arrow {
+  from {
+    opacity: 0.5;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); 
+        }
+  to {
+    opacity: 0.3;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); 
+        } 
+}
+
+@keyframes arrow {
+  from {
+    opacity: 0.5;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  to {
+    opacity: 0.3;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } 
+}
+
+/*
+            
+.intro :nth-child(1) {
+    padding: 20px;
+    font-size: 60px;
+    opacity: 0;
+    -webkit-animation: fadeIn 0.5s ease-in forwards;
+            animation: fadeIn 0.5s ease-in forwards; }
+  .intro :nth-child(2) {
+    padding: 20px;
+    font-size: 35px;
+    -webkit-animation: fadeIn 0.5s ease-in forwards 0.2s;
+            animation: fadeIn 0.5s ease-in forwards 0.2s;
+    opacity: 0; }
+  .intro #arrow {
+    -webkit-animation: arrow 0.5s infinite ease-in alternate;
+            animation: arrow 0.5s infinite ease-in alternate;
+    opacity: 1; }
+*/

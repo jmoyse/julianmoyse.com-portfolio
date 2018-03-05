@@ -6,6 +6,9 @@ import { withStyles, WithStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button/Button';
 import Grid from 'material-ui/Grid/Grid';
 import * as classNames from 'classnames';
+import { setSelectedIndex } from '../actions/PortfolioAction';
+import { store } from '../store/PortfolioStore';
+
 import './Intro.css';
 
 const headshot = require('../img/headshot2.jpg');
@@ -47,7 +50,7 @@ class IntroComponent extends React.Component<IntroProps & WithStyles<ClassNames>
         this.onResize();
         window.onresize = this.onResize;
     }
-
+    // if the window is resized, then we need to resize the intro component to take up the entire screen
     onResize = () => {
         this.setState({
             height: window.innerHeight + 'px',
@@ -91,9 +94,9 @@ class IntroComponent extends React.Component<IntroProps & WithStyles<ClassNames>
                             alt="headshot"
                             className={classNames(this.props.classes.avatar)}
                         />
-                        <Typography variant="display3" >
+                        <Typography variant="display3" color="primary">
                             Julian Moyse
-                                </Typography>
+                        </Typography>
 
                         <Typography variant="headline" >
                             Full Stack Developer
@@ -101,18 +104,17 @@ class IntroComponent extends React.Component<IntroProps & WithStyles<ClassNames>
                     </Grid>
 
                     <Button
-                        
+                        className="arrowAnimation"
                         variant="fab"
                         color="primary"
                         aria-label="add"
-                        onClick={(evt) => this.props.onArrowMouseDown(this, evt)}
+                        onClick={(evt) => { store.dispatch(setSelectedIndex(10))}}
                         style={
                             {
                                 verticalAlign: 'flex-end',
                                 alignSelf: 'center',
                                 position: 'relative',
-                                top: '-110px',
-
+                                top: - window.outerHeight * 0.15,
                             }}
                     >
                         <ArrowIcon />

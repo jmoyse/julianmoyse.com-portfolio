@@ -62,7 +62,7 @@ class SectionComponent extends React.Component<SectionProps & WithStyles<ClassNa
                                 <Typography
                                     variant="display2"
                                     align="center"
-                                    color="secondary"
+                                    color="primary"
                                     style={{ paddingBottom: '30px', display: 'block', fontVariant: 'caps' }}
                                 >
                                     {this.props.title}

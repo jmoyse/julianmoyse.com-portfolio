@@ -55,7 +55,7 @@ class SkillsComponent extends React.Component<SkillsProps & WithStyles<ClassName
                     justify="center"
                 >
 
-                    <Paper elevation={15} style={{ padding: '20px', display: 'block', minWidth: '0px', maxWidth: '90%' }}>
+                    <Paper elevation={15} style={{ padding: '20px', paddingTop: '40px', display: 'block', minWidth: '0px', maxWidth: '90%' }}>
                         <Typography style={{ maxWidth: '700px' }} >
                             I have 10+ years experience in programming, which has allowed me me to develop skills in a variety of different languages and databases.
                             I have experience in a number of different front-end and back-end languages, however my current expertise is in web focused technologies.

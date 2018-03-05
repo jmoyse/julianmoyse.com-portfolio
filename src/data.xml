@@ -1,7 +1,6 @@
 <portfolio>
    <intro avatar="/images/headshot.jpg" heading="Julian Moyse"  subheading="Full Stack Developer" />
    <about>
-   F
    I am a Software Developer and Computer Scientist. I graduated from the University of Maryland with a Bachelors in Computer Science. I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology and software design principles.
 
    Currently working as a freelance web developer, but always open to new opportunities.
@@ -21,7 +20,7 @@
    <projects>
        <project name="Word Coaster" url="https://wordcoaster.julianmoyse.com/play/" screenshot="wordcoaster1.gif"  github="">
            <description>
-               Mobile real time multiplayer game. A twist on classic board games like Scrabble and Boggle. Games are played in real-time vs the entire lobby. The winner is the player who can score the most points in the lobby before the 2 minute timer is up.  Support for hundreds of concurrent players with chat, score history and profiles. Cleanly written using a number of different modern languages and APIs. Broken up in a number of smaller projects.  Selected source code available upon request.
+               Progress Web App (PWA) online multiple game. A modern twist on classic board games like Scrabble and Boggle. Rounds are played in real-time versuses the entire lobby with the object to get the highest score before time runs out. Points are assigned from predefined tile values along with bonus tilies.  Support for hundreds of concurrent players with chat, score history and profiles. Cleanly written using a number of different modern languages and APIs. Broken up in a number of smaller projects.  Playable as a PWA phone application or from any web browser by clicking the play button below. Source code available upon request.
            </description>
        <techs>
            <tech name="Typescript" icon="typescript" />

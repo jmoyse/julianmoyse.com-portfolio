@@ -1,8 +1,6 @@
 import * as React from 'react';
 // import MenuIcon from 'material-ui-icons/Menu';
 import Reboot from 'material-ui/Reboot/Reboot';
-import AppBar from 'material-ui/AppBar/AppBar';
-import Toolbar from 'material-ui/Toolbar/Toolbar';
 // import IconButton from 'material-ui/IconButton/IconButton';
 import Intro from './components/Intro';
 import About from './components/About';
@@ -10,17 +8,29 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Server from './components/Server';
 import { withStyles, WithStyles } from 'material-ui/styles';
-import * as Scroll from 'react-scroll';
 import './App.css';
 import './awesome/css/fontawesome.min.css';
 import './awesome/css/fontawesome.css';
 import { createMuiTheme } from 'material-ui/styles';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Button from 'material-ui/Button/Button';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
-import Fade from 'material-ui/transitions/Fade';
-import Grid from 'material-ui/Grid/Grid';
+import NavBar from './components/NavBar';
+import { connect } from 'react-redux';
+import { PortfolioStore } from './store/PortfolioStore';
+
+export interface PortfolioProps {
+  selectedIndex: Number;
+}
+
+export interface PortfolioState {
+
+}
+const styles = {
+
+};
+type ClassNames = keyof typeof styles;
+
 
 var xml = require('./data.json');
 
@@ -30,19 +40,22 @@ const theme = createMuiTheme({
       light: 'rgba(33,33,33,0.72)',
       main: '#606060',
       dark: '#002884',
-      contrastText: '#fff',
+      contrastText: '#000000',
     },
     secondary: {
-      light: '#2196f3',
+      light: '#000000',
       main: '#2196f3',
       dark: '#ba000d',
-      contrastText: '#000',
+      contrastText: '#000000',
     },
-
+    text: {
+      primary: 'rgba(0, 0, 0, 0.87)',
+      secondary: 'rgba(255,255,255,1)',
+      //secondary: 'white',
+      disabled: 'rgba(0, 0, 0, 0.38)',
+      hint: 'rgba(0, 0, 0, 0.38)',
+    },
   },
-
-
-
   /*
     palette: {
       primary1Color: coblue500,
@@ -59,152 +72,32 @@ const theme = createMuiTheme({
       pickerHeaderColor: blue500,
     },
   */
-
 });
-export interface PortfolioProps {
 
+function mapStateToProps (storeState: PortfolioStore.Stores): PortfolioStore.NavigationStore {
+  return {
+    selectedIndex: storeState !== undefined && storeState.NavigationStore !== undefined ? storeState.NavigationStore.selectedIndex : 0,
+  };
 }
-export interface PortfolioState {
-  appBarVisible: boolean;
-}
-
-const styles = {
-
-};
-type ClassNames = keyof typeof styles;
 
 class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, PortfolioState> {
-  scroller = Scroll.scroller;
-  lastScrollTop = 0;
-  isScrolling: boolean = false;
-  SCROLL_DURATION_MS = 1000;
-
   constructor (props: PortfolioProps & WithStyles<ClassNames>) {
     super(props);
-    this.state = {
-      appBarVisible: false,
-    };
-  }
-
-  componentDidMount () {
-    this.scroller.scrollTo('App', {
-      duration: 100,
-      delay: 0,
-      smooth: 'easeOutQuad',
-      ignoreCancelEvents: true,
-    });
-    window.onscroll = this.onScroll;
-  }
-
-  onScroll = (event: any) => {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    let scrollingDown: boolean = scrollTop > this.lastScrollTop ? true : false;
-    this.lastScrollTop = scrollTop;
-
-    if (!this.isScrolling) {
-      let aboutDOM: (HTMLElement | null) = document.getElementById('aboutSection');
-      let domPosition = (aboutDOM !== null) ? aboutDOM.offsetTop : 0;
-
-      if (domPosition > pageYOffset && scrollingDown) {
-        this.onArrowMouseDown();
-      }
-      else if (domPosition > pageYOffset && !scrollingDown) {
-        this.onArrowMouseUp();
-      }
-    }
-  }
-
-  onArrowMouseDown = () => {
-    this.scrollTo('aboutSection', 'easeOutQuad', true);
-    this.setScrolling();
-    this.setAppBarVisible(true);
-
-  }
-
-  onArrowMouseUp = () => {
-    this.scrollTo('headerSection', 'easeOutQuad', true);
-    this.setScrolling();
-    this.setAppBarVisible(false);
-  }
-
-  setAppBarVisible = (visible: boolean) => {
-    setTimeout(() => {
-      this.isScrolling = false;
-      this.setState({ appBarVisible: visible });
-      // tslint:disable-next-line:align
-    }, this.SCROLL_DURATION_MS + 100);
-  }
-
-  setScrolling = () => {
-    this.isScrolling = true;
-    setTimeout(() => {
-      this.isScrolling = false;
-      // tslint:disable-next-line:align
-    }, this.SCROLL_DURATION_MS + 100);
-  }
-
-  scrollTo = (component: string, easingFunction: string, canCancel: boolean) => {
-    this.scroller.scrollTo(component, {
-      duration: this.SCROLL_DURATION_MS,
-      delay: 0,
-      smooth: easingFunction,
-      ignoreCancelEvents: canCancel,
-    });
   }
 
   render () {
     return (
       <div id="top" className="App" >
+
         <Reboot />
         <section id="headerSection" />
+
         <MuiThemeProvider theme={theme}>
-          <div hidden={!this.state.appBarVisible}>
-            <Fade in={true} >
-              <AppBar position="fixed">
-                <Toolbar >
-                  {
-                    /*
-                    <IconButton color="primary" aria-label="Menu">
-                      <MenuIcon />
-                    </IconButton>
-                    */
-                  }
-                  <Grid
-                    alignItems="center"
-                    alignContent="center"
-                    direction="row"
-                    justify="center"
-                    container={true}
-
-                  >
-
-
-                    <Button type="dense" color="primary" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
-                      About
-                    </Button>
-                    <Button type="dense" color="primary" onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}>
-                      Contact
-                    </Button>
-                    <Button type="dense" color="primary" onClick={() => this.scrollTo('skillsSection', 'easeOutQuad', false)}>
-                      Skills
-                    </Button>
-                    <Button type="dense" color="primary" onClick={() => this.scrollTo('projectsSection', 'easeOutQuad', false)}>
-                      Projects
-                    </Button>
-                    <Button type="dense" color="primary" onClick={() => this.scrollTo('educationSection', 'easeOutQuad', false)}>
-                      Education
-                    </Button>
-
-                  </Grid>
-                </Toolbar>
-              </AppBar>
-            </Fade>
-          </div>
-
+          <NavBar />
           <section id="introSection">
             <Intro
-              onArrowMouseDown={this.onArrowMouseDown}
+              //onArrowMouseDown={this.onArrowMouseDown}
+              onArrowMouseDown={() => { }}
             />
           </section>
           <section id="aboutSection">
@@ -227,13 +120,14 @@ class AppStyle extends React.Component<PortfolioProps & WithStyles<ClassNames>, 
           <section id="footerSection">
             <Footer />
           </section>
-
         </MuiThemeProvider>
       </div >
     );
   }
 }
 
-const App = withStyles(styles)<PortfolioProps>(AppStyle);
+// TODO: this isn't
+const ThemedApp = withStyles(styles)<PortfolioProps>(AppStyle); // adding Material UI theme
+const App = connect(mapStateToProps)(ThemedApp); // connect to redux
 
 export default App;
