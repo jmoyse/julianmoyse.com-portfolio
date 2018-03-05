@@ -3,7 +3,7 @@ import { portfolioReducer } from './PortfolioReducer';
 
 
 export default combineReducers({
-    PortfolioStore: portfolioReducer,
+    NavigationStore: portfolioReducer,
 });
 
 export {

@@ -8,7 +8,7 @@ import Grid from 'material-ui/Grid/Grid';
 import * as classNames from 'classnames';
 import { setSelectedIndex } from '../actions/PortfolioAction';
 import { store } from '../store/PortfolioStore';
-
+import { SubsectionType } from '../SubsectionTypes';
 import './Intro.css';
 
 const headshot = require('../img/headshot2.jpg');
@@ -108,7 +108,7 @@ class IntroComponent extends React.Component<IntroProps & WithStyles<ClassNames>
                         variant="fab"
                         color="primary"
                         aria-label="add"
-                        onClick={(evt) => { store.dispatch(setSelectedIndex(10))}}
+                        onClick={(evt) => { store.dispatch(setSelectedIndex(SubsectionType.ABOUT)); }}
                         style={
                             {
                                 verticalAlign: 'flex-end',

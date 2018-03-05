@@ -28,24 +28,11 @@ type ClassNames = keyof typeof style;
 class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>, AboutState> {
     constructor (props: AboutProps & WithStyles<ClassNames>) {
         super(props);
-
     }
 
     render () {
         return (
             <Section id="aboutLink" title="" background="#EFEFEF">
-                {
-                    /*
-                    <Grid>
-                        <Typography type="display2">
-                            Julian
-                    </Typography>
-                        <Typography type="display2" gutterBottom={true} color="accent">
-                            Moyse
-                    </Typography>
-                    </Grid>
-                    */
-                }
                 <Paper
                     elevation={5}
                     style={
@@ -67,7 +54,6 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                                 width: '100%',
                                 marginBottom: '0px',
                                 paddingBottom: '0px',
-
                                 backgroundImage: `url(${background})`
                             }}
                     />
@@ -90,10 +76,10 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                                 }}
                         >
                             <CardContent style={{ paddingTop: '0px', paddingRight: '0px', marginRight: '10px', }}>
-                                <Paper elevation={10} style={{ padding: '5px', margin: '10px', position: 'static', maxWidth: '400px', float: 'right' }}>
+                                <div style={{ padding: '5px', margin: '10px', position: 'static', maxWidth: '400px', float: 'right' }}>
                                     <Grid item={true} alignItems="flex-end" style={{ marginTop: '0px', paddingTop: '0px', paddingLeft: '5px', paddingRight: '5px' }}>
                                         <Grid container={true} direction="row" alignItems="flex-end" style={{ margin: '0px' }}>
-                                            <Typography variant="subheading" color="primary" style={{ paddingBottom: '0px' }} >
+                                            <Typography variant="caption" color="primary" style={{ paddingBottom: '0px' }} >
                                                 Like the site? Check it out on
                                             </Typography >
 
@@ -130,24 +116,24 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
 
                                         {}
 
-                                        <Typography variant="subheading" color="primary">
+                                        <Typography variant="caption" color="primary">
                                             Fork it, Copy it, Destroy it. <br />
                                             Made with <b>Typescript</b>, <b>React</b> and <b>Material UI</b><br />
                                             Think its really cool? Let me know! &nbsp;&nbsp;👍🏽
                                         </Typography>
 
                                     </Grid>
-                                </Paper>
+                                </div>
                                 <Typography variant="display3" paragraph={true} gutterBottom={true} style={{ paddingTop: '50px' }} >
                                     Hello.
                                 </Typography>
                                 <Typography paragraph={true} style={{ paddingRight: '20px' }}>
-                                    My name is <b>Julian Moyse</b> I'm a Full Stack Software Developer based out of <b>Washington DC</b> area. I create full featured, user-focused applications on the web.
+                                    My name is <b>Julian Moyse</b> I'm a Full Stack Software Developer based out of the <b>Washington DC</b> area. I create full featured, user-focused applications on the web.
                                     I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology
                                     and software design principles.
                                    <br />
-                                   <p />
-                                    Interested in all facets of computers, the internet and technology.
+                                    <p />
+                                    Interested in everything with computers, the internet and technology.
                                    <br />
                                 </Typography>
 
@@ -167,7 +153,6 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                         </div>
                     </Paper>
                     <Contact />
-
                 </Grid>
 
             </Section >

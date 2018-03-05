@@ -1,11 +1,10 @@
 <portfolio>
    <intro avatar="/images/headshot.jpg" heading="Julian Moyse"  subheading="Full Stack Developer" />
    <about>
-   I am a Software Developer and Computer Scientist. I graduated from the University of Maryland with a Bachelors in Computer Science. I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology and software design principles.
-
-   Currently working as a freelance web developer, but always open to new opportunities.
-   Lifelong geek, nerd and techie.
-   Feel free to shoot me a message
+    My name is Julian Moyse I'm a Full Stack Software Developer based out of the Washington DC area. I create full featured, user-focused applications on the web.
+    I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology
+    and software design principles.
+    Interested in everything with computers, the internet and technology.
    </about>
 
    <contacts>
@@ -20,7 +19,7 @@
    <projects>
        <project name="Word Coaster" url="https://wordcoaster.julianmoyse.com/play/" screenshot="wordcoaster1.gif"  github="">
            <description>
-               Progress Web App (PWA) online multiple game. A modern twist on classic board games like Scrabble and Boggle. Rounds are played in real-time versuses the entire lobby with the object to get the highest score before time runs out. Points are assigned from predefined tile values along with bonus tilies.  Support for hundreds of concurrent players with chat, score history and profiles. Cleanly written using a number of different modern languages and APIs. Broken up in a number of smaller projects.  Playable as a PWA phone application or from any web browser by clicking the play button below. Source code available upon request.
+               Progress Web App (PWA) online multiple game. A modern twist on classic board games like Scrabble and Boggle. Rounds are played in real-time vs the entire lobby with the objective to get the highest score before time runs out. Points are assigned from predefined tile values along with randomized bonus tiles.  Support for hundreds of concurrent players with chat, score history and profiles. Cleanly written using a number of different modern languages and APIs. Broken up in a number of smaller projects.  Playable as a PWA phone application or from any web browser by clicking the play button below. Source code available upon request.
            </description>
        <techs>
            <tech name="Typescript" icon="typescript" />
@@ -35,7 +34,8 @@
 
        <project name="2048" url="" screenshot="2048.png" github="https://github.com/jmoyse/2048-csharp">
            <description>
-               .NET version of the 2048 tile game
+                Implementation of the popular tile game 2048. The objective of the game is reach the highest score by merging tiles of the same type. The game gets increasingly harder as additional types of tiles are added onto the board. The application was written as a lightweight Windows application written in C# and the .NET runtime. Designed to be a feature complete version of the original game. Requires Windows and .NET
+
            </description>
             <techs>
            <tech name="C#" icon="csharp" />
@@ -45,8 +45,7 @@
 
        <project name="Loose Quadtree Data Structure" url="" screenshot="showquad.png" github="https://github.com/jmoyse/loosequadtree">
            <description>
-               Implementation of the the Quadtree Data Structure.
-               C++ implementation of the Data Structure used for efficient querying of 2-D objects. Supports efficient range queries and storage. Written for CMSC420 (Data Structures).
+               C++ implementation of the Quadtree Data Structure used in the querying and storing of 2-D shapes and points. Supports efficient location, range queries and storage. Designed primarily as a console application, but includes optional GUI for visualizing successively layers in the tree. Written for CMSC420 (Data Structures). Binaries and source code on Github.
            </description>
            <techs>
                <tech name="C++" icon="cplusplus" />
@@ -54,9 +53,9 @@
            </techs>
        </project>
 
-       <project name="Word Coaster Server Back-end" url="https://julianmoyse.com:3000/solver?tiles=RILLEPVPIEUOOONU" screenshot="gameserver1.png" github="https://github.com/jmoyse/boggle-solver-microservice">
+       <project name="Boggle Micro-service solver " url="https://julianmoyse.com:3000/solver?tiles=RILLEPVPIEUOOONU" screenshot="gameserver1.png" github="https://github.com/jmoyse/boggle-solver-microservice">
            <description>
-              Micro-service that efficiently solves a board of any given size using a Trie and depth-first traversal of the gameboard. Returns results in JSON.
+              Node.JS microservice used to solve a boggle board of a given size. Used as a supportive sub application to the Word Coaster game. Designed to take a parameterized game string and return a board solution. Efficiently solves a board using a Trie and depth-first traversal of the gameboard. Returns results in JSON.
            </description>
            <techs>
                <tech name="Node.js" icon="cplusplus" />
@@ -69,24 +68,11 @@
 
        <project name="Bittorrent Client" url="" screenshot="btclient.png" github="https://github.com/jmoyse/btclient-ruby">>
            <description>
-              Bittorrent client written in ruby
+              Small lightweight bittorrent client. Implements a subset of the bt protocol. Includes tracker connection, handshake and peer uploading/downloading. Implements a packet queue to handle fast connections between peers. Implemented in Ruby and using raw sockets.  Written for CMSC417.
            </description>
            <techs>
                <tech name="Ruby" icon="ruby" />
                <tech name="Sockets" icon="sockets" />
-           </techs>
-       </project>
-
-       <project name="Boggle Solver Microservice" url="https://julianmoyse.com:3000/solver?tiles=RILLEPVPIEUOOONU" screenshot="solver2.png" github="https://github.com/jmoyse/boggle-solver-microservice">
-           <description>
-              Microservice that efficiently solves a board of any given size using a Trie and depth-first traversal of the gameboard. Returns results in JSON.
-           </description>
-           <techs>
-               <tech name="Node.js" icon="cplusplus" />
-               <tech name="Express" icon="csharp" />
-               <tech name="Typescript" icon="csharp" />
-               <tech name="JSON" icon="WebSockets" />
-               <tech name="Docker" icon="Docker" />
            </techs>
        </project>
 
@@ -110,7 +96,7 @@
 
        <project name="Tablet Touch Keyboard" url="" screenshot="keyboard-small.png" github="">
            <description>
-              Small, touch enabled on screen keyboard for tablets. Requires Mono,
+                On-screen keyboard for the Gnome desktop environment. Designed as a lightweight and small keyboard for pen enabled tablets. Written in Mono, C#, GTK and GTK-Sharp.
            </description>
            <techs>
                <tech name="Mono" icon="" />

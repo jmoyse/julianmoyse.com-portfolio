@@ -5,11 +5,11 @@ type SET_SELECTED_INDEX = typeof SET_SELECTED_INDEX;
 // action type
 interface PortfolioAction {
     type: string;
-    index: Number;
+    index: number;
 }
 
 // actions
-function setSelectedIndex (index: Number): PortfolioAction {
+function setSelectedIndex (index: number): PortfolioAction {
     return {
         type: SET_SELECTED_INDEX,
         index: index,

@@ -9,7 +9,6 @@ export default function portfolioReducer (currentState: PortfolioStore.Navigatio
 
     switch (action.type) {
         case SET_SELECTED_INDEX:
-            console.log('updating selected index ' + action.index);    
             return { selectedIndex: action.index };
         default:
             return currentState;

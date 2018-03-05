@@ -50,7 +50,7 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
 
                                 <Grid>
                                     <Typography variant="title" >
-                                        Computer Science - Bachelors of Science
+                                        Computer Science - Bachelor of Science
                                     </Typography>
                                     <Typography variant="subheading" style={{ paddingBottom: '0px' }}>
                                         University of Maryland
@@ -60,7 +60,7 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
                                     </Typography>
                                     <Typography variant="body2" style={{ paddingBottom: '0px', paddingLeft: '20px' }}>
                                         ▪ Design and Analysis of Computer Algorithms<br />
-                                        ▪ Database Design, Computer Networks<br />
+                                        ▪ Database Design<br />
                                         ▪ Computer Networks<br />
                                         ▪ System Architecture<br />
                                         ▪ Human-Computer Interaction<br />
@@ -77,7 +77,7 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
 
                                 <Grid >
                                     <Typography variant="title">
-                                        Mathematics - Associates of Arts
+                                        Mathematics - Associate of Arts
                                     </Typography>
                                     <Typography variant="subheading" style={{ paddingBottom: '0px' }}>
                                         Howard Community College
@@ -96,7 +96,7 @@ class EducationComponent extends React.Component<EducationProps & WithStyles<Cla
 
                                 <Grid>
                                     <Typography variant="title" >
-                                        Computer Science - Associates of Arts
+                                        Computer Science - Associate of Arts
                                     </Typography>
                                     <Typography variant="subheading" style={{ paddingBottom: '0px' }}>
                                         Howard Community College

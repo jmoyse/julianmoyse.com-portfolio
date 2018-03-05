@@ -2,7 +2,7 @@ import reducer from '../reducers/';
 import { createStore } from 'redux';
 
 namespace PortfolioStore {
-    export type NavigationStore = { selectedIndex: Number };
+    export type NavigationStore = { selectedIndex:  number };
 
     export type Stores = {
         NavigationStore: NavigationStore;
@@ -10,8 +10,6 @@ namespace PortfolioStore {
 }
 
 const store = createStore(reducer);
-console.log(store);
 
 export default PortfolioStore;
-
 export { store, PortfolioStore };

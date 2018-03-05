@@ -23,7 +23,6 @@ type ClassNames = keyof typeof style;
 class ServerComponent extends React.Component<ServerProps & WithStyles<ClassNames>, ServerState> {
     constructor (props: ServerProps & WithStyles<ClassNames>) {
         super(props);
-
     }
 
     render () {

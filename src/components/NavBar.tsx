@@ -2,27 +2,48 @@ import * as React from 'react';
 import * as Scroll from 'react-scroll';
 import AppBar from 'material-ui/AppBar/AppBar';
 import Toolbar from 'material-ui/Toolbar/Toolbar';
-import { withStyles, WithStyles } from 'material-ui/styles';
+import { createMuiTheme, withStyles, WithStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button/Button';
 import Fade from 'material-ui/transitions/Fade';
 import Grid from 'material-ui/Grid/Grid';
-//import { BrowserRouter as Router } from 'react-router-dom';
-import './NavBar.css';
-import { setSelectedIndex } from '../actions/PortfolioAction';
-
 import { store } from '../store/PortfolioStore';
+import { setSelectedIndex } from '../actions/PortfolioAction';
+import { SubsectionType, subsectionToDOMName } from '../SubsectionTypes';
+import { connect } from 'react-redux';
+import { PortfolioStore } from '../store/PortfolioStore';
+import './NavBar.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export interface NavBarProps {
-
+    selectedIndex: number;
 }
 export interface NavBarState {
     appBarVisible: boolean;
 }
 
+
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            light: '#ffffff',
+            main: '#ffffff',
+            dark: '#ffffff',
+            contrastText: '#ffffff',
+        },
+    }
+});
+
 const styles = {
 
 };
+
 type ClassNames = keyof typeof styles;
+
+function mapStateToProps (storeState: PortfolioStore.Stores): PortfolioStore.NavigationStore {
+    return {
+        selectedIndex: storeState.NavigationStore.selectedIndex,
+    };
+}
 
 class NavBarStyle extends React.Component<NavBarProps & WithStyles<ClassNames>, NavBarState> {
     scroller = Scroll.scroller;
@@ -35,6 +56,12 @@ class NavBarStyle extends React.Component<NavBarProps & WithStyles<ClassNames>, 
         this.state = {
             appBarVisible: false,
         };
+    }
+
+    componentWillReceiveProps (nextProps: NavBarProps, prevProps: NavBarState) {
+        if (nextProps.selectedIndex !== this.props.selectedIndex) {
+            this.scrollTo(nextProps.selectedIndex as SubsectionType);
+        }
     }
 
     componentDidMount () {
@@ -66,14 +93,14 @@ class NavBarStyle extends React.Component<NavBarProps & WithStyles<ClassNames>, 
         }
     }
     onArrowMouseDown = () => {
-        this.scrollTo('aboutSection', 'easeOutQuad', true);
+        this.scrollTo(SubsectionType.ABOUT);
         this.setScrolling();
         this.setAppBarVisible(true);
 
     }
 
     onArrowMouseUp = () => {
-        this.scrollTo('headerSection', 'easeOutQuad', true);
+        this.scrollTo(SubsectionType.HEADER);
         this.setScrolling();
         this.setAppBarVisible(false);
     }
@@ -94,10 +121,11 @@ class NavBarStyle extends React.Component<NavBarProps & WithStyles<ClassNames>, 
         }, this.SCROLL_DURATION_MS + 100);
     }
 
-    scrollTo = (component: string, easingFunction: string, canCancel: boolean) => {
-        store.dispatch(setSelectedIndex(10));
+    scrollTo = (subsection: SubsectionType, easingFunction: string = 'easeOutQuad', canCancel: boolean = true) => {
+        store.dispatch(setSelectedIndex(subsection));
+        let componentName: string = subsectionToDOMName(subsection);
 
-        this.scroller.scrollTo(component, {
+        this.scroller.scrollTo(componentName, {
             duration: this.SCROLL_DURATION_MS,
             delay: 0,
             smooth: easingFunction,
@@ -118,43 +146,53 @@ class NavBarStyle extends React.Component<NavBarProps & WithStyles<ClassNames>, 
                                 justify="center"
                                 container={true}
                             >
-                                <Button
-                                    type="dense"
-                                    color="primary"
-                                    onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}
-                                >
-                                    About
+                                <MuiThemeProvider theme={theme}>
+                                    <Button
+                                        type="dense"
+                                        color="primary"
+                                        onClick={(evt) => { store.dispatch(setSelectedIndex(SubsectionType.ABOUT)); }}
+                                    >
+                                        About
                                 </Button>
 
-                                <Button
-                                    type="dense"
-                                    color="secondary"
-                                    onClick={() => this.scrollTo('aboutSection', 'easeOutQuad', false)}
-                                >
-                                    Contact
+                                    <Button
+                                        type="dense"
+                                        color="primary"
+                                        onClick={(evt) => { store.dispatch(setSelectedIndex(SubsectionType.CONTACT)); }}
+                                    >
+                                        Contact
                                     </Button>
 
-                                <Button
-                                    type="dense"
-                                    color="secondary"
-                                    onClick={() => this.scrollTo('skillsSection', 'easeOutQuad', false)}
-                                >
-                                    Skills
+                                    <Button
+                                        type="dense"
+                                        color="primary"
+                                        onClick={(evt) => { store.dispatch(setSelectedIndex(SubsectionType.SKILLS)); }}
+                                    >
+                                        Skills
                                 </Button>
-                                <Button
-                                    type="dense"
-                                    color="secondary"
-                                    onClick={() => this.scrollTo('projectsSection', 'easeOutQuad', false)}
-                                >
-                                    Projects
+                                    <Button
+                                        type="dense"
+                                        color="primary"
+                                        onClick={(evt) => { store.dispatch(setSelectedIndex(SubsectionType.PROJECTS)); }}
+                                    //onClick={() => this.scrollTo(SubsectionType.PROJECTS, 'projectsSection', 'easeOutQuad', false)}
+                                    >
+                                        Projects
                                 </Button>
-                                <Button
-                                    type="dense"
-                                    color="secondary"
-                                    onClick={() => this.scrollTo('educationSection', 'easeOutQuad', false)
-                                    }>
-                                    Education
+                                    <Button
+                                        type="dense"
+                                        color="primary"
+                                        onClick={(evt) => { store.dispatch(setSelectedIndex(SubsectionType.EDUCATION)); }}
+                                    >
+                                        Education
                                 </Button>
+                                    <Button
+                                        type="dense"
+                                        color="primary"
+                                        onClick={(evt) => { store.dispatch(setSelectedIndex(SubsectionType.SERVER)); }}
+                                    >
+                                        Server
+                                </Button>
+                                </MuiThemeProvider>
                             </Grid>
                         </Toolbar>
                     </AppBar>
@@ -163,7 +201,7 @@ class NavBarStyle extends React.Component<NavBarProps & WithStyles<ClassNames>, 
         );
     }
 }
-
-const NavBar = withStyles(styles)<NavBarProps>(NavBarStyle);
+const NavBarStyled = withStyles(styles)<NavBarProps>(NavBarStyle);
+const NavBar = connect(mapStateToProps)(NavBarStyled);
 
 export default NavBar;
