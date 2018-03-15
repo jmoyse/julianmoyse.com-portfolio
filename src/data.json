@@ -5,7 +5,7 @@
             "_heading": "Julian Moyse",
             "_subheading": "Full Stack Developer"
         },
-        "about": "\n    My name is Julian Moyse I'm a Full Stack Software Developer based out of the Washington DC area. I create full featured, user-focused applications on the web.\n    I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology\n    and software design principles.\n    Interested in everything with computers, the internet and technology.\n   ",
+        "about": "\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n   ",
         "contacts": {
             "contact": [
                 {
@@ -76,10 +76,41 @@
                             }
                         ]
                     },
-                    "_name": "Word Coaster",
-                    "_url": "https://wordcoaster.julianmoyse.com/play/",
+                    "_name": "Wordcoaster.com",
+                    "_url": "https://www.wordcoaster.com/play/",
                     "_screenshot": "wordcoaster1.gif",
                     "_github": ""
+                },
+                {
+                    "description": "\n               Android and iOS weather application designed to mimic the functionality of the Yahoo Weather app. Written using React Native, Javascript, Typescript and Redux. Uses the Yahoo weather API for acessing realtime weather data. Fully animated with beautiful backgrounds and icons.  Source and binaries avilable on github.\n           ",
+                    "techs": {
+                        "tech": [
+                            {
+                                "_name": "React Native",
+                                "_icon": "typescript"
+                            },
+                            {
+                                "_name": "Typescript",
+                                "_icon": "typescript"
+                            },
+                            {
+                                "_name": "Javascript",
+                                "_icon": "typescript"
+                            },
+                            {
+                                "_name": "Redux",
+                                "_icon": "typescript"
+                            },
+                            {
+                                "_name": "Webpack",
+                                "_icon": "typescript"
+                            }
+                        ]
+                    },
+                    "_name": "React Native Weather",
+                    "_url": "",
+                    "_screenshot": "weatherapp.png",
+                    "_github": "https://github.com/jmoyse/weather-app-react-native"
                 },
                 {
                     "description": "\n                Implementation of the popular tile game 2048. The objective of the game is reach the highest score by merging tiles of the same type. The game gets increasingly harder as additional types of tiles are added onto the board. The application was written as a lightweight Windows application written in C# and the .NET runtime. Designed to be a feature complete version of the original game. Requires Windows and .NET\n\n           ",

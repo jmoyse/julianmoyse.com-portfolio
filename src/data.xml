@@ -1,10 +1,7 @@
 <portfolio>
    <intro avatar="/images/headshot.jpg" heading="Julian Moyse"  subheading="Full Stack Developer" />
    <about>
-    My name is Julian Moyse I'm a Full Stack Software Developer based out of the Washington DC area. I create full featured, user-focused applications on the web.
-    I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology
-    and software design principles.
-    Interested in everything with computers, the internet and technology.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
    </about>
 
    <contacts>
@@ -17,7 +14,7 @@
    </contacts>
 
    <projects>
-       <project name="Word Coaster" url="https://wordcoaster.julianmoyse.com/play/" screenshot="wordcoaster1.gif"  github="">
+       <project name="Wordcoaster.com" url="https://www.wordcoaster.com/play/" screenshot="wordcoaster1.gif"  github="">
            <description>
                Progress Web App (PWA) online multiple game. A modern twist on classic board games like Scrabble and Boggle. Rounds are played in real-time vs the entire lobby with the objective to get the highest score before time runs out. Points are assigned from predefined tile values along with randomized bonus tiles.  Support for hundreds of concurrent players with chat, score history and profiles. Cleanly written using a number of different modern languages and APIs. Broken up in a number of smaller projects.  Playable as a PWA phone application or from any web browser by clicking the play button below. Source code available upon request.
            </description>
@@ -29,6 +26,19 @@
            <tech name="Webpack" icon="typescript" />
            <tech name="Docker" icon="typescript" />
            <tech name="Material UI" icon="typescript" />
+       </techs>
+       </project>
+        <project name="React Native Weather" url="" screenshot="weatherapp.png"  github="https://github.com/jmoyse/weather-app-react-native">
+           <description>
+               Android and iOS weather application designed to mimic the functionality of the Yahoo Weather app. Written using React Native, Javascript, Typescript and Redux. Uses the Yahoo weather API for acessing realtime weather data. Fully animated with beautiful backgrounds and icons.  Source and binaries avilable on github.
+           </description>
+       <techs>
+           <tech name="React Native" icon="typescript" />
+           <tech name="Typescript" icon="typescript" />
+           <tech name="Javascript" icon="typescript" />           
+           <tech name="Redux" icon="typescript" />
+           <tech name="Webpack" icon="typescript" />
+           
        </techs>
        </project>
 

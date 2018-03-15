@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { withStyles, WithStyles } from 'material-ui/styles';
+import Reboot from 'material-ui/Reboot/Reboot';
 import Grid from 'material-ui/Grid/Grid';
 import Paper from 'material-ui/Paper/Paper';
 import List from 'material-ui/List/List';
@@ -42,7 +43,7 @@ class ContactComponent extends React.Component<ContactProps & WithStyles<ClassNa
                     }
                 }
             >
-
+                <Reboot />
                 <Grid
                     container={true}
                     spacing={8}

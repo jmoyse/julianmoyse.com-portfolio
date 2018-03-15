@@ -128,12 +128,11 @@ class AboutComponent extends React.Component<AboutProps & WithStyles<ClassNames>
                                     Hello.
                                 </Typography>
                                 <Typography paragraph={true} style={{ paddingRight: '20px' }}>
-                                    My name is <b>Julian Moyse</b> I'm a Full Stack Software Developer based out of the <b>Washington DC</b> area. I create full featured, user-focused applications on the web.
-                                    I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology
-                                    and software design principles.
+                                    My name is <b>Julian Moyse</b> I'm a Full Stack Software Developer based out of the <b>Washington DC</b> area. I create full featured, user-focused applications for the web and mobile devices.
+                                    I am a detail-oriented developer with a passion for writing clean, efficient and well maintained code. I pride myself in staying up to date with the latest technology and software design principles.
                                    <br />
                                     <p />
-                                    Interested in everything with computers, the internet and technology.
+                                    Interested in anything computers, the internet and technology.
                                    <br />
                                 </Typography>
 
