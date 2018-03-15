@@ -1,9 +1,10 @@
 ![Screenshot](https://raw.githubusercontent.com/jmoyse/julianmoyse.com-portfolio/master/src/screenshots/portfolio.png)
 
+              
 # Portfolio
 
 ## About
-This is the source of my personal portfolio. You can see the website in action at [(https://www.julianmoyse.com)]https://www.julianmoyse.com. The website is designed to a personal showcase of the some applications that I have created over the years. The individual components of the website are modular and designed to be reusable for this and other projects in the future.
+This is the source of my personal portfolio. You can see the website in action at [https://www.julianmoyse.com](https://www.julianmoyse.com). The website is designed to be a personal showcase of the some applications that I have created over the years. The individual components of the website are modular and designed to be reusable for this and other projects in the future.
 
 Uses the following technologies:
 * React
@@ -13,27 +14,44 @@ Uses the following technologies:
 * Redux
 * React-Redux
 * Font-Awesome
+
 ## Editing
 The majority of the site can be changed by editing the data.xml file and running it through an [XML to JSON](https://codebeautify.org/xmltojsonXML) converter. The resulting file should be named data.json and put in the base of the src folder. At some point in the future I'll read directly from the XML. Below are some XML blocks explaining how to edit the various sections.
 
-  ### Intro 
+  ### Intro
   ```xml
-  <intro avatar="path/to/avatar.jpg" heading="First Name Last Name"  subheading="Some Job Title" />
+  <intro
+    avatar="path/to/avatar.jpg"
+    heading="First Name Last Name"
+    subheading="Some Job Title"
+  />
   ```
   ### Contacts
   ```xml
   <contacts>
-        <contact name="contact type" link="url.of.contact" icon="icon-filename-in-icons-folder.png" />
+        <contact 
+        name="contact type"
+        link="url.of.contact"
+        icon="icon-filename-in-icons-folder.png"
+        />
   </contacts>
   ```
 
   ### Projects
   ```xml
   <projects>
-        <project name="project name" url="optional-url.of.project" screenshot="filename-in-screenshotsfolder.jpg"  github="optional-github-url">
-            <description>description of the project </description>
+        <project 
+          name="project name"
+          url="optional-url.of.project"
+          screenshot="filename-in-screenshotsfolder.jpg"
+          github="optional-github-url"
+        >
+        <description>description of the project </description>
         <techs>
-            <tech name="name of technology used" icon="optional icon" />
+            <tech
+              name="name of technology used"
+              icon="optional icon"
+            />
         </techs>
   </project>
   ```
@@ -41,14 +59,22 @@ The majority of the site can be changed by editing the data.xml file and running
   ### Education
   ```xml
   <education>
-        <school name="Name of School" degree="Name of Degree" location="Location" />
+        <school 
+          name="Name of School"
+          degree="Name of Degree"
+          location="Location"
+        />
   </education>
   ```
 
   ### Skills
   ```xml
   <skills>
-    <skill name="Skill Name" icon="icon-name-in-iconsfolder.png" score="score from 0 to 100" />
+    <skill
+      name="Skill Name"
+      icon="icon-name-in-iconsfolder.png"
+      score="score from 0 to 100"
+    />
   </skills>
   ```
 
